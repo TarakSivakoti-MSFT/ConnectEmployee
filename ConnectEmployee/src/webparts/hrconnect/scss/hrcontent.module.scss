@@ -1,6 +1,43 @@
 @import "~office-ui-fabric-react/dist/sass/References.scss";
 .hrcontent {
-  .dis{
-    display: flex !important;
+  .dis {
+    display: flex;
+    padding: 10px;
+  }
+
+  .date {
+    margin-left: 55%;
+  }
+  .datewidth {
+    width: "300px";
+  }
+  td,
+  th {
+    vertical-align: middle !important;
+    &:nth-child(n + 1) {
+      width: 70%;
+    }
+  }
+  button {
+    text-decoration: blink !important;
+  }
+  button,
+  .card,
+  .heading {
+    cursor: pointer;
+  }
+  .ptoalign,
+  .reqpto {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .reqpto {
+    margin-top: 6%;
+  }
+  .deck {
+    padding: 2rem;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 }
