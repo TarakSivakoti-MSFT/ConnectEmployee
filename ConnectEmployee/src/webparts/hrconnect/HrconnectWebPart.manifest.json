@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "0e7718e9-c48a-4af5-983e-ca6fd0ffa286",
+  "alias": "HrconnectWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart","TeamsTab"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "Hrconnect" },
+    "description": { "default": "Hrconnect description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Hrconnect"
+    }
+  }]
+}
