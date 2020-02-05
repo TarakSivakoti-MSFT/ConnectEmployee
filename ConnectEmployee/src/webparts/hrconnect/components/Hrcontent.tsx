@@ -163,12 +163,12 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     <h1 className={style.ptoalign}>7</h1>
                   </div>
                 </div>
-                <div className={cx("card", style.card)}>
+                <div
+                  className={cx("card", style.card)}
+                  onClick={this._showModal}
+                >
                   <div className="card-body">
-                    <h5
-                      className={cx("card-title", style.reqpto)}
-                      onClick={this._showModal}
-                    >
+                    <h5 className={cx("card-title", style.reqpto)}>
                       Request PTO
                     </h5>
                     <Modal
@@ -247,9 +247,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  }
+  };
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }
