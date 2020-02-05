@@ -4,7 +4,7 @@ import cx from "classnames";
 import Tabledata from "../components/Tabledata";
 import Ptorequest from "../components/Ptorequest";
 import Training from "../components/Training/Training";
-import Benefits from "./benefits"
+import Benefits from "./benefits";
 
 import {
   DatePicker,
@@ -12,7 +12,7 @@ import {
   IDatePickerStrings
 } from "office-ui-fabric-react/lib/DatePicker";
 import Documentviewer from "./documentviewer";
-import { Modal, IDragOptions } from 'office-ui-fabric-react/lib/Modal';
+import { Modal, IDragOptions } from "office-ui-fabric-react/lib/Modal";
 const DayPickerStrings: IDatePickerStrings = {
   months: [
     "January",
@@ -74,8 +74,7 @@ export interface IDatePickerState {
 }
 
 export default class Hrcontent extends React.Component<{}, IDatePickerState> {
- 
-    constructor(props: {}) {
+  constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -137,7 +136,6 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     </tr>
                   </thead> */}
                   <Tabledata />
-                  
                 </table>
                 {/* <Documentviewer/> */}
               </div>
@@ -167,21 +165,26 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                 </div>
                 <div className={cx("card", style.card)}>
                   <div className="card-body">
-                    <h5 className={cx("card-title", style.reqpto)} onClick={this._showModal}>
+                    <h5
+                      className={cx("card-title", style.reqpto)}
+                      onClick={this._showModal}
+                    >
                       Request PTO
                     </h5>
                     <Modal
-                  titleAriaId="Request Form"
-                  isOpen={this.state.showModal}
-                  onDismiss={this._closeModal}
-                  isBlocking={false}
-                  containerClassName={"container"}
-                  
-                > 
-                  <span onClick={this._closeModal}><i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                  </span>
-                  <Ptorequest/>
-                </Modal>
+                      titleAriaId="Request Form"
+                      isOpen={this.state.showModal}
+                      onDismiss={this._closeModal}
+                      isBlocking={false}
+                      containerClassName={"container"}
+                    >
+                      <span onClick={this._closeModal}>
+                        <i
+                          className={cx("fa fa-times-circle-o", style.spclose)}
+                        ></i>
+                      </span>
+                      <Ptorequest />
+                    </Modal>
                   </div>
                 </div>
               </div>
@@ -208,8 +211,8 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               data-parent="#hrcontent"
             >
               <div className="card-body">
-              <Benefits/>
-               </div>  
+                <Benefits />
+              </div>
             </div>
           </div>
           <div className="card">
@@ -233,7 +236,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               data-parent="#hrcontent"
             >
               <div className="card-body">
-               <Training/>
+                <Training />
               </div>
             </div>
           </div>
@@ -244,9 +247,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  };
+  }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }

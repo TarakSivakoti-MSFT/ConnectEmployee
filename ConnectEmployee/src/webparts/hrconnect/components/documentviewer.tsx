@@ -3,16 +3,16 @@ import { Document, Page ,pdfjs} from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
  export default class  Documentviewer extends React.Component {
-  state = {
+  public state = {
     numPages: null,
     pageNumber: 1,
-  }
+  };
  
-  onDocumentLoad({ numPages }) {
+  public onDocumentLoad({ numPages }) {
     this.setState({ numPages });
   }
  
-  render() {
+  public render() {
     return (
       <div>
         <Document

@@ -3,7 +3,7 @@ import style from "../scss/hrcontent.module.scss";
 import cx from "classnames";
 
 export interface IRegisterprops {
-  classname:string
+  classname:string;
 }
 
 export default class Register extends React.Component<IRegisterprops> {
