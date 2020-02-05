@@ -2,9 +2,9 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.9.1",
-    "libraryName": "hr-content",
-    "libraryId": "8942847f-0bc6-41d4-9a54-9bf1e6ad20a4",
+    "version": "1.10.0",
+    "libraryName": "spfxreact",
+    "libraryId": "13f79e45-428f-4ed6-bbe4-4384ffebf1bd",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "webpart"

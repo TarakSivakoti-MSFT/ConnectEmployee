@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "hrcontent-web-part": {
+    "hrconnect-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/hrcontent/HrcontentWebPart.js",
-          "manifest": "./src/webparts/hrcontent/HrcontentWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/hrconnect/HrconnectWebPart.js",
+          "manifest": "./src/webparts/hrconnect/HrconnectWebPart.manifest.json"
         }
       ]
     }
   },
-  "externals": {},
   "localizedResources": {
-    "HrcontentWebPartStrings": "lib/webparts/hrcontent/loc/{locale}.js"
+    "HrconnectWebPartStrings": "lib/webparts/hrconnect/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
   }
 }

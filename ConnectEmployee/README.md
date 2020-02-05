@@ -1,4 +1,4 @@
-## hr-content
+## spfxreact
 
 This is where you include your WebPart documentation.
 
