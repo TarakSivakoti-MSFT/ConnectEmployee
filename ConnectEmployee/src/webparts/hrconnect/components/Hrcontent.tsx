@@ -89,24 +89,24 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <h2 className={cx("mb-0",style.heading)}>
+              <h2 className={cx("mb-0", style.heading, style.pay)}>
                 <button className="btn btn-link" type="button">
                   Pay
                 </button>
               </h2>
             </div>
 
-            <div id="pay" className="collapse show" data-parent="#hrcontent">
+            <div id="pay" className="collapse" data-parent="#hrcontent">
               <div className={style.dis}>
                 <div className={style.date1}>
-                <DatePicker
-                  className={style.datewidth}
-                  isRequired={true}
-                  firstDayOfWeek={firstDayOfWeek}
-                  strings={DayPickerStrings}
-                  placeholder="Start Date"
-                  ariaLabel="Select a date"
-                />
+                  <DatePicker
+                    className={style.datewidth}
+                    isRequired={true}
+                    firstDayOfWeek={firstDayOfWeek}
+                    strings={DayPickerStrings}
+                    placeholder="Start Date"
+                    ariaLabel="Select a date"
+                  />
                 </div>
                 <div className={style.date}>
                   <DatePicker
@@ -142,7 +142,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              <h2 className={cx("mb-0",style.heading)}>
+              <h2 className={cx("mb-0", style.heading, style.pto)}>
                 <button className="btn btn-link collapsed" type="button">
                   PTO
                 </button>
@@ -174,7 +174,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              <h2 className={cx("mb-0",style.heading)}>
+              <h2 className={cx("mb-0", style.heading, style.benefits)}>
                 <button className="btn btn-link collapsed" type="button">
                   Benefits
                 </button>
@@ -208,7 +208,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-expanded="false"
               aria-controls="collapseFour"
             >
-              <h2 className={cx("mb-0",style.heading)}>
+              <h2 className={cx("mb-0", style.heading, style.dev)}>
                 <button className="btn btn-link collapsed" type="button">
                   Training/Dev
                 </button>
