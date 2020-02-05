@@ -28,7 +28,7 @@ export default class HrconnectWebPart extends BaseClientSideWebPart<
     let cssURL =
       "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
     SPComponentLoader.loadCss(cssURL);
-
+    SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
     const element: React.ReactElement<IHrconnectProps> = React.createElement(
       Hrconnect,
       {

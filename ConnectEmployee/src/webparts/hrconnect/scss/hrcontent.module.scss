@@ -1,12 +1,26 @@
 @import "~office-ui-fabric-react/dist/sass/References.scss";
+
+@font-face {
+  font-family: "Teams Assets";
+  src: url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EbI67qhodshHoDnu9mEcwsoB1IAgZ6tPSRGT0l4uH3TzYQ?e=QV3YNo")
+      format("woff"),
+    url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EdyaTp2MoCNGjvfphCei9wsB3QUpGHZWEZTaxEVKhErjbQ?e=l5x0Ty")
+      format("woff2");
+  font-style: normal;
+}
+
 .hrcontent {
   .dis {
-    display: flex;
     padding: 10px;
+    margin-bottom: 4%;
   }
 
   .date {
-    margin-left: 55%;
+    // margin-left: 55%;
+    float: right;
+  }
+  .date1 {
+    float: left;
   }
   .datewidth {
     width: "300px";
@@ -40,4 +54,72 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
+  .pay,
+  .pto,
+  .benefits,
+  .dev {
+    font-family: "Teams Assets light";
+    font-size: 18px;
+    color: #6264a7;
+  }
+
+  .pay {
+    &:before {
+      content: "\E5A2";
+      vertical-align: middle;
+    }
+
+    &:after {
+      content: "\E41E";
+      margin-top: 1%;
+      float: right;
+    }
+  }
+
+  .pto {
+    &:before {
+      content: "\E503";
+      vertical-align: middle;
+    }
+
+    &:after {
+      content: "\E41E";
+      margin-top: 1%;
+      float: right;
+    }
+  }
+  .benefits {
+    &:before {
+      content: "\E625";
+      vertical-align: middle;
+    }
+
+    &:after {
+      content: "\E41E";
+      margin-top: 1%;
+      float: right;
+    }
+  }
+  .dev {
+    &:before {
+      content: "\E912";
+      vertical-align: middle;
+    }
+
+    &:after {
+      content: "\E41E";
+      margin-top: 1%;
+      float: right;
+    }
+  }
+}
+.spclose {
+  font-size: xx-large !important;
+  float: right;
+}
+.reqptocontainer {
+  padding: 4%;
+}
+.registercontainer {
+  padding: 4%;
 }
