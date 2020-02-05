@@ -98,6 +98,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
             <div id="pay" className="collapse show" data-parent="#hrcontent">
               <div className={style.dis}>
+                <div className={style.date1}>
                 <DatePicker
                   className={style.datewidth}
                   isRequired={true}
@@ -106,6 +107,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   placeholder="Start Date"
                   ariaLabel="Select a date"
                 />
+                </div>
                 <div className={style.date}>
                   <DatePicker
                     className={style.datewidth}

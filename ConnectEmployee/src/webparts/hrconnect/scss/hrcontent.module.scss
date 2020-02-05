@@ -1,12 +1,16 @@
 @import "~office-ui-fabric-react/dist/sass/References.scss";
 .hrcontent {
   .dis {
-    display: flex;
     padding: 10px;
+    margin-bottom: 4%;
   }
 
   .date {
-    margin-left: 55%;
+    // margin-left: 55%;
+    float: right;
+  }
+  .date1 {
+    float: left;
   }
   .datewidth {
     width: "300px";
