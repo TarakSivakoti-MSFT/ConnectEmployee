@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styles from './Training.module.scss';
+import * as React from "react";
+import styles from "./Training.module.scss";
 import style from "../../scss/hrcontent.module.scss";
 import cx from "classnames";
 import {
@@ -7,8 +7,8 @@ import {
   DayOfWeek,
   IDatePickerStrings
 } from "office-ui-fabric-react/lib/DatePicker";
-import Modal from 'office-ui-fabric-react/lib/Modal';
-import Register from '../Register';
+import Modal from "office-ui-fabric-react/lib/Modal";
+import Register from "../Register";
 const DayPickerStrings: IDatePickerStrings = {
   months: [
     "January",
@@ -64,192 +64,205 @@ const DayPickerStrings: IDatePickerStrings = {
   invalidInputErrorMessage: "Invalid date format."
 };
 export default class Training extends React.Component {
- 
- 
- public state:{
-    showModal:false ,
-    classname:""
+  public state: {
+    showModal: false;
+    classname: "";
   };
   constructor(props: {}) {
     super(props);
 
     this.state = {
       showModal: false,
-      classname:""
+      classname: ""
     };
   }
-  public render () {
+  public render() {
     // let cssURL = "./Training.css";
     // SPComponentLoader.loadCss(cssURL);
     return (
       <div className="accordion" id="trainingdata">
-          <div className="card">
-            <div
-              className="card-header"
-              data-toggle="collapse"
-              data-target="#scheduleclasses"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <h2 className={cx("mb-0",style.heading)}>
-                <button className="btn btn-link" type="button">
-                  Schedule
-                </button>
-              </h2>
-            </div>
-
-            <div id="scheduleclasses" className="collapse show" data-parent="#trainingdata">
-            <div className={styles.training}>
-        <div className="row">
-        <div className="col-md-4 m-3">
-        <DatePicker
-                  className={style.datewidth}
-                  isRequired={true}
-                  firstDayOfWeek={DayOfWeek.Sunday}
-                  strings={DayPickerStrings}
-                  placeholder="Schedule Date"
-                  ariaLabel="Select a date"
-                />
-        </div>
-        </div>
-        <br></br>
-        <div className={styles.schedulewarp}>
-            <div className={styles.dayone}>Febrauary 7 (Friday) 2020</div>
-              <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                   <div className="col-md-4">
-                   <span className={styles.scheduletag}>10:00 AM</span> 
-                   </div>
-                   <div className="col-md-4">
-                      <strong>React</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag} onClick={() => this._showModal("React")}>Register</button> 
-                    </div>                
-                </div> 
-              </div>
-              <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                <div className="col-md-4">
-                   <span className={styles.scheduletag}>12:00 PM</span> 
-                   </div>
-                   <div className="col-md-4">
-                      <strong>.Net</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag} onClick={() => this._showModal(".Net")}>Register</button> 
-                    </div>                
-                </div> 
-            </div>
-            <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                   <div className="col-md-4">
-                   <span className={styles.scheduletag}>4:00 PM</span> 
-                   </div>
-                   <div className="col-md-4">
-                      <strong>Angular</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag} onClick={() => this._showModal("Angular")}>Register</button> 
-                    </div>                
-                </div> 
-              </div>
-        
-        </div>
-        <Modal
-                  titleAriaId="Request Form"
-                  isOpen={this.state.showModal}
-                  onDismiss={this._closeModal}
-                  isBlocking={false}
-                  containerClassName={"container"}
-                  
-                > 
-                  <span onClick={this._closeModal}><i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                  </span>
-                  <Register classname={this.state.classname}/>
-                </Modal>
-      </div>
-       
-      
-            </div>
-          </div>
-          <div className="card">
+        <div className="card">
           <div
-              className="card-header"
-              data-toggle="collapse"
-              data-target="#onlineclasses"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <h2 className={cx("mb-0",style.heading)}>
-                <button className="btn btn-link" type="button">
-                  Online Trainings
-                </button>
-              </h2>
-            </div>
-
-            <div id="onlineclasses" className="collapse show" data-parent="#trainingdata">
-            <div className={styles.training}>
-       
-        <div className={styles.schedulewarp}>
-              <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                   <div className="col-md-6">
-                      <strong>React Advanced</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag} >View</button> 
-                    </div>                
-                </div> 
-              </div>
-              <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                   <div className="col-md-6">
-                      <strong>.Net Full Stack</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button> 
-                    </div>                
-                </div> 
-            </div>
-            <div className={styles.schedulecard}>
-                <div className={cx("row",styles.insidebox)}>
-                   <div className="col-md-6">
-                      <strong>Angular Deep Concepts</strong> 
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button> 
-                    </div>                
-                </div> 
-              </div>
-        
-        </div>
-        <Modal
-                  titleAriaId="Request Form"
-                  isOpen={this.state.showModal}
-                  onDismiss={this._closeModal}
-                  isBlocking={false}
-                  containerClassName={"container"}
-                  
-                > 
-                  <span onClick={this._closeModal}><i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                  </span>
-                  <Register classname={this.state.classname}/>
-                </Modal>
-      </div>
-       
-      
-            </div>
+            className="card-header"
+            data-toggle="collapse"
+            data-target="#scheduleclasses"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <h2 className={cx("mb-0", style.heading)}>
+              <button className="btn btn-link" type="button">
+                Schedule
+              </button>
+            </h2>
           </div>
 
-      </div> 
+          <div
+            id="scheduleclasses"
+            className="collapse show"
+            data-parent="#trainingdata"
+          >
+            <div className={styles.training}>
+              <div className="row">
+                <div className="col-md-4 m-3">
+                  <DatePicker
+                    className={style.datewidth}
+                    isRequired={true}
+                    firstDayOfWeek={DayOfWeek.Sunday}
+                    strings={DayPickerStrings}
+                    placeholder="Schedule Date"
+                    ariaLabel="Select a date"
+                  />
+                </div>
+              </div>
+              <br></br>
+              <div className={styles.schedulewarp}>
+                <div className={styles.dayone}>Febrauary 7 (Friday) 2020</div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-4">
+                      <span className={styles.scheduletag}>10:00 AM</span>
+                    </div>
+                    <div className="col-md-4">
+                      <strong>React</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button
+                        className={styles.scheduletag}
+                        onClick={() => this._showModal("React")}
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-4">
+                      <span className={styles.scheduletag}>12:00 PM</span>
+                    </div>
+                    <div className="col-md-4">
+                      <strong>.Net</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button
+                        className={styles.scheduletag}
+                        onClick={() => this._showModal(".Net")}
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-4">
+                      <span className={styles.scheduletag}>4:00 PM</span>
+                    </div>
+                    <div className="col-md-4">
+                      <strong>Angular</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button
+                        className={styles.scheduletag}
+                        onClick={() => this._showModal("Angular")}
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Modal
+                titleAriaId="Request Form"
+                isOpen={this.state.showModal}
+                onDismiss={this._closeModal}
+                isBlocking={false}
+                containerClassName={"container"}
+              >
+                <span onClick={this._closeModal}>
+                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
+                </span>
+                <Register classname={this.state.classname} />
+              </Modal>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div
+            className="card-header"
+            data-toggle="collapse"
+            data-target="#onlineclasses"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <h2 className={cx("mb-0", style.heading)}>
+              <button className="btn btn-link" type="button">
+                Online Trainings
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="onlineclasses"
+            className="collapse show"
+            data-parent="#trainingdata"
+          >
+            <div className={styles.training}>
+              <div className={styles.schedulewarp}>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-6">
+                      <strong>React Advanced</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button className={styles.scheduletag}>View</button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-6">
+                      <strong>.Net Full Stack</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button className={styles.scheduletag}>View</button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-6">
+                      <strong>Angular Deep Concepts</strong>
+                    </div>
+                    <div className="col-md-4">
+                      <button className={styles.scheduletag}>View</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Modal
+                titleAriaId="Request Form"
+                isOpen={this.state.showModal}
+                onDismiss={this._closeModal}
+                isBlocking={false}
+                containerClassName={"container"}
+              >
+                <span onClick={this._closeModal}>
+                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
+                </span>
+                <Register classname={this.state.classname} />
+              </Modal>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
-  private _showModal(className:string) {
-    this.setState({ showModal: true,classname:className });
+  private _showModal(className: string) {
+    this.setState({ showModal: true, classname: className });
   }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }
