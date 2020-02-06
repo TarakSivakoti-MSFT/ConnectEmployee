@@ -2,13 +2,17 @@ import * as React from "react";
 import style from "../scss/hrcontent.module.scss";
 import cx from "classnames";
 import Tabledata from "../components/Tabledata";
+import Ptorequest from "../components/Ptorequest";
+import Training from "../components/Training/Training";
+import Benefits from "./benefits";
 
 import {
   DatePicker,
   DayOfWeek,
   IDatePickerStrings
 } from "office-ui-fabric-react/lib/DatePicker";
-
+import Documentviewer from "./documentviewer";
+import { Modal, IDragOptions } from "office-ui-fabric-react/lib/Modal";
 const DayPickerStrings: IDatePickerStrings = {
   months: [
     "January",
@@ -66,13 +70,16 @@ const DayPickerStrings: IDatePickerStrings = {
 
 export interface IDatePickerState {
   firstDayOfWeek?: DayOfWeek;
+  showModal: boolean;
 }
 
 export default class Hrcontent extends React.Component<{}, IDatePickerState> {
-  constructor(props: {}) {
+
+    constructor(props: {}) {
     super(props);
 
     this.state = {
+      showModal: false,
       firstDayOfWeek: DayOfWeek.Sunday
     };
   }
@@ -131,6 +138,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   </thead> */}
                   <Tabledata />
                 </table>
+                {/* <Documentviewer/> */}
               </div>
             </div>
           </div>
@@ -156,11 +164,28 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     <h1 className={style.ptoalign}>7</h1>
                   </div>
                 </div>
-                <div className={cx("card", style.card)}>
+                <div
+                  className={cx("card", style.card)}
+                  onClick={this._showModal}
+                >
                   <div className="card-body">
                     <h5 className={cx("card-title", style.reqpto)}>
                       Request PTO
                     </h5>
+                    <Modal
+                      titleAriaId="Request Form"
+                      isOpen={this.state.showModal}
+                      onDismiss={this._closeModal}
+                      isBlocking={false}
+                      containerClassName={"container"}
+                    >
+                      <span onClick={this._closeModal}>
+                        <i
+                          className={cx("fa fa-times-circle-o", style.spclose)}
+                        ></i>
+                      </span>
+                      <Ptorequest />
+                    </Modal>
                   </div>
                 </div>
               </div>
@@ -187,16 +212,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               data-parent="#hrcontent"
             >
               <div className="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+                <Benefits />
               </div>
             </div>
           </div>
@@ -221,16 +237,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               data-parent="#hrcontent"
             >
               <div className="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
+                <Training />
               </div>
             </div>
           </div>
@@ -238,4 +245,12 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
       </div>
     );
   }
+
+  private _showModal = (): void => {
+    this.setState({ showModal: true });
+  };
+
+  private _closeModal = (): void => {
+    this.setState({ showModal: false });
+  };
 }
