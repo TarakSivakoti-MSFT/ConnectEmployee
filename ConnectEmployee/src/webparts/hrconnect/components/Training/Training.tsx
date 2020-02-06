@@ -178,7 +178,7 @@ export default class Training extends React.Component {
                 onDismiss={this._closeModal}
                 isBlocking={false}
               >
-                <h3 onClick={this._closeModal} className="float-right pr-2" aria-hidden="true">×</h3>
+                <h3 onClick={this._closeModal} className={cx("float-right pr-2",style.popupclose)} aria-hidden="true">×</h3>
                 <Register classname={this.state.classname} />
               </Modal>
             </div>

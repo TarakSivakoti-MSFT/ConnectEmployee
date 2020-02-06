@@ -176,8 +176,8 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                       onDismiss={this._closeModal}
                       isBlocking={false}
                     >
-                      <h3  onClick={this._closeModal} className="float-right pr-2" aria-hidden="true">×</h3>
-                      <Ptorequest />
+                       <h3 onClick={this._closeModal} className={cx("float-right pr-2",style.popupclose)} aria-hidden="true">×</h3>
+                       <Ptorequest />
                     </Modal>
                   </div>
                 </div>
