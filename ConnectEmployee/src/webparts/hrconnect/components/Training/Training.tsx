@@ -264,5 +264,5 @@ export default class Training extends React.Component {
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }
