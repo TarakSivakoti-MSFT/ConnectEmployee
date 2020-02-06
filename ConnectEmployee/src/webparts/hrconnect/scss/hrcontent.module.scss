@@ -29,7 +29,7 @@
   th {
     vertical-align: middle !important;
     &:nth-child(n + 1) {
-      width: 70%;
+      width: 45%;
     }
   }
   button {
@@ -112,4 +112,14 @@
       float: right;
     }
   }
+}
+.spclose {
+  font-size: xx-large !important;
+  float: right;
+}
+.reqptocontainer {
+  padding: 4%;
+}
+.registercontainer {
+  padding: 4%;
 }
