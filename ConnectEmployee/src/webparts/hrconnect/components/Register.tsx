@@ -18,7 +18,7 @@ export default class Register extends React.Component<IRegisterprops> {
   public render () {
  
     return (
-      <div  className={cx("container", style.reqptocontainer)}>
+      <div  className={style.reqptocontainer}>
         <h5>Register for Class</h5>
           <div className="form-group">
               <label>Email address:</label>

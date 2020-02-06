@@ -137,7 +137,6 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   </thead> */}
                   <Tabledata />
                 </table>
-                {/* <Documentviewer/> */}
               </div>
             </div>
           </div>
@@ -176,13 +175,8 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                       isOpen={this.state.showModal}
                       onDismiss={this._closeModal}
                       isBlocking={false}
-                      containerClassName={"container"}
                     >
-                      <span onClick={this._closeModal}>
-                        <i
-                          className={cx("fa fa-times-circle-o", style.spclose)}
-                        ></i>
-                      </span>
+                      <h3  onClick={this._closeModal} className="float-right pr-2" aria-hidden="true">×</h3>
                       <Ptorequest />
                     </Modal>
                   </div>

@@ -62,7 +62,7 @@ export default class Ptorequest extends React.Component {
   public render () {
  
     return (
-      <div className={cx("container", style.reqptocontainer)}>
+      <div className={ style.reqptocontainer}>
           <h5>PTO Request</h5>
           <div className="row">
                 <div className="col-md-4">

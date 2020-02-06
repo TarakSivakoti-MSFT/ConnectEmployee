@@ -10,7 +10,7 @@ export default class Benefits extends React.Component {
         <div className={cx("card-deck", style.deck)}>
         <div className={cx("card", style.card)}>
           <div className="card-body">
-            <h5 className="card-title text-primary">Current Benefits</h5>
+            <h5 className="card-title">Current Benefits</h5>
             <ul className="list-group">
                 <li  className="list-group-item">
                 Medical Insurance <span className="float-right"><i className="fa fa-check text-primary"></i></span> 
@@ -26,7 +26,7 @@ export default class Benefits extends React.Component {
         </div>
         <div className={cx("card", style.card)}>
           <div className="card-body">
-            <h5 className="card-title text-primary">
+            <h5 className="card-title">
               Other Benefits 
             </h5>
             <ul className="list-group">

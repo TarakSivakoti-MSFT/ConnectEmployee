@@ -90,7 +90,7 @@ export default class Training extends React.Component {
             aria-controls="collapseOne"
           >
             <h2 className={cx("mb-0", style.heading)}>
-              <button className="btn btn-link" type="button">
+              <button className="btn" type="button">
                 Schedule
               </button>
             </h2>
@@ -116,18 +116,18 @@ export default class Training extends React.Component {
               </div>
               <br></br>
               <div className={styles.schedulewarp}>
-                <div className={styles.dayone}>Febrauary 7 (Friday) 2020</div>
+                <h5 className={cx("card-title", styles.dayone)}>Febrauary 7 (Friday) 2020</h5>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <span className={styles.scheduletag}>10:00 AM</span>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <strong>React</strong>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <button
-                        className={styles.scheduletag}
+                         className="btn btn-primary float-right"
                         onClick={() => this._showModal("React")}
                       >
                         Register
@@ -137,15 +137,15 @@ export default class Training extends React.Component {
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <span className={styles.scheduletag}>12:00 PM</span>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <strong>.Net</strong>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <button
-                        className={styles.scheduletag}
+                         className="btn btn-primary float-right"
                         onClick={() => this._showModal(".Net")}
                       >
                         Register
@@ -155,15 +155,15 @@ export default class Training extends React.Component {
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <span className={styles.scheduletag}>4:00 PM</span>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <strong>Angular</strong>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4">
                       <button
-                        className={styles.scheduletag}
+                         className="btn btn-primary float-right"
                         onClick={() => this._showModal("Angular")}
                       >
                         Register
@@ -173,15 +173,12 @@ export default class Training extends React.Component {
                 </div>
               </div>
               <Modal
-                titleAriaId="Request Form"
+                titleAriaId="Register Form"
                 isOpen={this.state.showModal}
                 onDismiss={this._closeModal}
                 isBlocking={false}
-                containerClassName={"container"}
               >
-                <span onClick={this._closeModal}>
-                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                </span>
+                <h3 onClick={this._closeModal} className="float-right pr-2" aria-hidden="true">×</h3>
                 <Register classname={this.state.classname} />
               </Modal>
             </div>
@@ -196,7 +193,7 @@ export default class Training extends React.Component {
             aria-controls="collapseOne"
           >
             <h2 className={cx("mb-0", style.heading)}>
-              <button className="btn btn-link" type="button">
+              <button className="btn" type="button">
                 Online Trainings
               </button>
             </h2>
@@ -211,47 +208,53 @@ export default class Training extends React.Component {
               <div className={styles.schedulewarp}>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>11:00 AM</span>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
                       <strong>React Advanced</strong>
                     </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                      <button
+                         className="btn btn-primary float-right"
+                      >
+                        View
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>1:00 PM</span>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
                       <strong>.Net Full Stack</strong>
                     </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                    <button type="button" className="btn btn-primary  float-right">
+                    View
+                  </button>
                     </div>
                   </div>
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>3:00 PM</span>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
                       <strong>Angular Deep Concepts</strong>
                     </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                    <button type="button" className="btn btn-primary float-right">
+                      View
+                    </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <Modal
-                titleAriaId="Request Form"
-                isOpen={this.state.showModal}
-                onDismiss={this._closeModal}
-                isBlocking={false}
-                containerClassName={"container"}
-              >
-                <span onClick={this._closeModal}>
-                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                </span>
-                <Register classname={this.state.classname} />
-              </Modal>
+             
             </div>
           </div>
         </div>
