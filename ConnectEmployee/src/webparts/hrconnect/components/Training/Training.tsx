@@ -64,7 +64,10 @@ const DayPickerStrings: IDatePickerStrings = {
   invalidInputErrorMessage: "Invalid date format."
 };
 export default class Training extends React.Component {
-
+  public state: {
+    showModal: false;
+    classname: "";
+  };
   constructor(props: {}) {
     super(props);
 
@@ -77,7 +80,7 @@ export default class Training extends React.Component {
     // let cssURL = "./Training.css";
     // SPComponentLoader.loadCss(cssURL);
     return (
-      <div className="accordion" id="training">
+      <div className="accordion" id="trainingdata">
         <div className="card">
           <div
             className="card-header"
@@ -96,7 +99,7 @@ export default class Training extends React.Component {
           <div
             id="scheduleclasses"
             className="collapse show"
-            data-parent="#training"
+            data-parent="#trainingdata"
           >
             <div className={styles.training}>
               <div className="row">
@@ -202,7 +205,7 @@ export default class Training extends React.Component {
           <div
             id="onlineclasses"
             className="collapse show"
-            data-parent="#training"
+            data-parent="#trainingdata"
           >
             <div className={styles.training}>
               <div className={styles.schedulewarp}>
@@ -261,5 +264,5 @@ export default class Training extends React.Component {
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }

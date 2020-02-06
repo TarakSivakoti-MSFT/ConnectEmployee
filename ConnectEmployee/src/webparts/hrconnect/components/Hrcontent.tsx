@@ -137,7 +137,6 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     </tr>
                   </thead> */}
                   <Tabledata />
-
                 </table>
                 {/* <Documentviewer/> */}
               </div>
@@ -170,7 +169,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   onClick={this._showModal}
                 >
                   <div className="card-body">
-                    <h5 className={cx("card-title", style.reqpto)} >
+                    <h5 className={cx("card-title", style.reqpto)}>
                       Request PTO
                     </h5>
                     <Modal
