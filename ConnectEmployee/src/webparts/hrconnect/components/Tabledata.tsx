@@ -1,7 +1,7 @@
 import * as React from "react";
 import style from "../scss/hrcontent.module.scss";
 export default class Tabledata extends React.Component {
-  isView:boolean=false;
+ public isView:boolean=false;
   public render() {
     return (
       

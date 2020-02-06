@@ -13,13 +13,13 @@ export default class Benefits extends React.Component {
             <h5 className="card-title text-primary">Current Benefits</h5>
             <ul className="list-group">
                 <li  className="list-group-item">
-                <span><i className="fa fa-check text-primary"></i></span> Medical Insurance 
+                Medical Insurance <span className="float-right"><i className="fa fa-check text-primary"></i></span> 
                 </li>
                 <li  className="list-group-item">
-                <span><i className="fa fa-check text-primary"></i></span> Retirement Benefits 
+              Retirement Benefits <span className="float-right"><i className="fa fa-check text-primary"></i></span> 
                 </li>
                 <li  className="list-group-item">
-                <span><i className="fa fa-check text-primary"></i></span>Family Leave 
+                Family Leave <span className="float-right"><i className="fa fa-check text-primary"></i></span> 
                 </li>
             </ul>
           </div>
@@ -31,13 +31,13 @@ export default class Benefits extends React.Component {
             </h5>
             <ul className="list-group">
                 <li className="list-group-item">
-                <span><i className="fa fa-close text-danger"></i></span> Life Insurance 
+                Life Insurance <span className="float-right"><i className="fa fa-close text-danger"></i></span> 
                 </li>
                 <li className="list-group-item">
-                <span><i className="fa fa-close text-danger"></i></span>Disability Insurance 
+                Disability Insurance <span className="float-right"><i className="fa fa-close text-danger"></i></span> 
                 </li>
                 <li className="list-group-item">
-                <span><i className="fa fa-close text-danger"></i></span>Vacation
+                Vacation <span className="float-right"><i className="fa fa-close text-danger"></i></span> 
                 </li>
             </ul>
           </div>

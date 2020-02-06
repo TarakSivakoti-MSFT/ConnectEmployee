@@ -66,10 +66,10 @@ const DayPickerStrings: IDatePickerStrings = {
 export default class Training extends React.Component {
  
  
-  state:{
+ public state:{
     showModal:false ,
     classname:""
-  }
+  };
   constructor(props: {}) {
     super(props);
 
@@ -82,7 +82,7 @@ export default class Training extends React.Component {
     // let cssURL = "./Training.css";
     // SPComponentLoader.loadCss(cssURL);
     return (
-      <div className="accordion" id="training">
+      <div className="accordion" id="trainingdata">
           <div className="card">
             <div
               className="card-header"
@@ -98,7 +98,7 @@ export default class Training extends React.Component {
               </h2>
             </div>
 
-            <div id="scheduleclasses" className="collapse show" data-parent="#training">
+            <div id="scheduleclasses" className="collapse show" data-parent="#trainingdata">
             <div className={styles.training}>
         <div className="row">
         <div className="col-md-4 m-3">
@@ -188,7 +188,7 @@ export default class Training extends React.Component {
               </h2>
             </div>
 
-            <div id="onlineclasses" className="collapse show" data-parent="#training">
+            <div id="onlineclasses" className="collapse show" data-parent="#trainingdata">
             <div className={styles.training}>
        
         <div className={styles.schedulewarp}>
@@ -242,33 +242,14 @@ export default class Training extends React.Component {
             </div>
           </div>
 
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
+      </div> 
     );
   }
   private _showModal(className:string) {
     this.setState({ showModal: true,classname:className });
-  };
+  }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }

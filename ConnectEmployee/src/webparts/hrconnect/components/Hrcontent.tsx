@@ -4,7 +4,7 @@ import cx from "classnames";
 import Tabledata from "../components/Tabledata";
 import Ptorequest from "../components/Ptorequest";
 import Training from "../components/Training/Training";
-import Benefits from "./benefits"
+import Benefits from "./benefits";
 
 import {
   DatePicker,
@@ -165,9 +165,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     <h1 className={style.ptoalign}>7</h1>
                   </div>
                 </div>
-                <div className={cx("card", style.card)}>
+                <div onClick={this._showModal} className={cx("card", style.card)}>
                   <div className="card-body">
-                    <h5 className={cx("card-title", style.reqpto)} onClick={this._showModal}>
+                    <h5 className={cx("card-title", style.reqpto)} >
                       Request PTO
                     </h5>
                     <Modal
@@ -244,9 +244,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  };
+  }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }
