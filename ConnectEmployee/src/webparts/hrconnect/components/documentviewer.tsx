@@ -7,11 +7,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
     numPages: null,
     pageNumber: 1,
   };
- 
+
   public onDocumentLoad({ numPages }) {
     this.setState({ numPages });
   }
- 
+
   public render() {
     return (
       <div>

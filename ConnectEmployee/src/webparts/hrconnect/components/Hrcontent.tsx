@@ -74,7 +74,8 @@ export interface IDatePickerState {
 }
 
 export default class Hrcontent extends React.Component<{}, IDatePickerState> {
-  constructor(props: {}) {
+
+    constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -136,6 +137,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     </tr>
                   </thead> */}
                   <Tabledata />
+
                 </table>
                 {/* <Documentviewer/> */}
               </div>
@@ -168,7 +170,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   onClick={this._showModal}
                 >
                   <div className="card-body">
-                    <h5 className={cx("card-title", style.reqpto)}>
+                    <h5 className={cx("card-title", style.reqpto)} >
                       Request PTO
                     </h5>
                     <Modal

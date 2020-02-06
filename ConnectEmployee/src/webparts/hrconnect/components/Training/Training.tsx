@@ -64,10 +64,7 @@ const DayPickerStrings: IDatePickerStrings = {
   invalidInputErrorMessage: "Invalid date format."
 };
 export default class Training extends React.Component {
- public state: {
-    showModal: false;
-    classname: "";
-  };
+
   constructor(props: {}) {
     super(props);
 
