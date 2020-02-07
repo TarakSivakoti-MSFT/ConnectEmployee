@@ -10,7 +10,9 @@
 }
 
 .hrcontent {
-  
+  .tabletd{
+    border-right: 1px solid #d8d8d8;
+  }
   .paystubrow:hover .paystubrow {
     transform: scale(1.033);
     /* box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); */
@@ -137,10 +139,11 @@
   }
   .tableborder{
     border-left: 1px solid rgb(224, 216, 216);
-    border-right: 1px solid rgb(224, 216, 216);
+    
     border-bottom: 1px solid rgb(224, 216, 216);
     box-shadow: 5px 10px #888888;
   }
+  
 }
 .spclose {
   font-size: xx-large !important;

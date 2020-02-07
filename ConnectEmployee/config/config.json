@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/hrconnect/HrconnectWebPart.manifest.json"
         }
       ]
+    },
+    "cafemenus-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/cafemenus/CafemenusWebPart.js",
+          "manifest": "./src/webparts/cafemenus/CafemenusWebPart.manifest.json"
+        }
+      ]
     }
   },
   "localizedResources": {
     "HrconnectWebPartStrings": "lib/webparts/hrconnect/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "CafemenusWebPartStrings": "lib/webparts/cafemenus/loc/{locale}.js"
   }
 }

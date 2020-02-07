@@ -179,24 +179,24 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                     */}
                     <table className={cx("table  table-responsive",style.tableborder)}>
                       <tr>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className={style.ptoheading}>Prior PTO Balance</span>
                         </td>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className={style.ptoheading}>Current Year Balance</span>
                         </td>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className={style.ptoheading}>Accurate Rate</span>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className="text-center">3</span>
                         </td>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className="text-center">7</span>
                         </td>
-                        <td>
+                        <td className={style.tabletd}>
                         <span className="text-center">2</span>
                         </td>
                       </tr>
