@@ -158,26 +158,23 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               <div className={cx("card-deck", style.deck)}>
                 <div className={cx("card", style.card)}>
                   <div className="card-body">
-                    {/* <div className={cx("row",style.ptooutline)}>
+                    <div className="row">
                        <div className={cx("col-md-4",style.ptoblock)}>
                         <span className={style.ptoheading}>Prior PTO Balance</span>
-                        <br></br>
-                        <span className="text-center">3</span>
-                         
+                        <div className="text-center">3</div>
                        </div>
                        <div className={cx("col-md-4",style.ptoblock)}>
                         <span className={style.ptoheading}>Current Year Balance</span>
-                        <br></br>
-                        <span className="text-center">7</span>
+                        <div className="text-center">7</div>
                        </div>
                        <div className={cx("col-md-4",style.ptoblock)}>
                         <span className={style.ptoheading}>Accurate Rate</span>
-                        <br></br>
-                        <span className="text-center">2</span>
+                        <br/><br/>
+                        <div className="text-center">2</div>
                        </div>
                     </div>
-                    */}
-                    <table className={cx("table  table-responsive",style.tableborder)}>
+                   
+                    {/* <table className={cx("table  table-responsive",style.tableborder)}>
                       <tr>
                         <td>
                         <span className={style.ptoheading}>Prior PTO Balance</span>
@@ -200,7 +197,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                         <span className="text-center">2</span>
                         </td>
                       </tr>
-                    </table>
+                    </table> */}
                   </div>
                 </div>
                 <div
