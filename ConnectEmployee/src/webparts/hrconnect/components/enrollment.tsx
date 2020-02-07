@@ -3,30 +3,30 @@ import style from "../scss/hrcontent.module.scss";
 import cx from "classnames";
 
 export interface IRegisterprops {
-  classname:string;
+    benefit:string;
 }
 
-export default class Register extends React.Component<IRegisterprops> {
+export default class Enrollment extends React.Component<IRegisterprops> {
   
   constructor(props: IRegisterprops) {
     super(props);
 
     this.state = {
-      classname:""
+        benefit:""
     };
   }
   public render () {
  
     return (
       <div  className={style.reqptocontainer}>
-        <h5>Register for Training</h5>
+        <h5>Enroll for Benefit</h5>
           <div className="form-group">
               <label>Email address:</label>
               <input type="email" className="form-control" id="email"/>
           </div>
           <div className="form-group">
-          <label>Class:</label>
-          <input type="text" className="form-control" id="class" value={this.props.classname} disabled/>
+          <label>Benefit:</label>
+          <input type="text" className="form-control" id="class" value={this.props.benefit} disabled/>
         </div>
         <button className="btn btn-primary">Submit</button>
      </div>

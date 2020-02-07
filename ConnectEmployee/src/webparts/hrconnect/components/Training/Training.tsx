@@ -90,7 +90,7 @@ export default class Training extends React.Component {
             aria-controls="collapseOne"
           >
             <h2 className={cx("mb-0", style.heading)}>
-              <button className="btn btn-link" type="button">
+              <button className="btn" type="button">
                 Schedule
               </button>
             </h2>
@@ -102,7 +102,7 @@ export default class Training extends React.Component {
             data-parent="#trainingdata"
           >
             <div className={styles.training}>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-md-4 m-3">
                   <DatePicker
                     className={style.datewidth}
@@ -114,22 +114,53 @@ export default class Training extends React.Component {
                   />
                 </div>
               </div>
-              <br></br>
+              <br></br> */}
+                <h2 className={cx("mb-0", style.heading)}>
+              <button className="btn" type="button">
+                Mandatory Trainings
+              </button>
+            </h2>
               <div className={styles.schedulewarp}>
-                <div className={styles.dayone}>Febrauary 7 (Friday) 2020</div>
-                <div className={styles.schedulecard}>
+                  <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
-                      <span className={styles.scheduletag}>10:00 AM</span>
+                    <div className="col-md-3 col-sm-3">
+                      <span className={styles.scheduletag}>10 Jan 2020
+                      </span>
+                      <br></br>
+                      10:00 AM
                     </div>
-                    <div className="col-md-4">
-                      <strong>React</strong>
+                    <div className="col-md-3 col-sm-3">
+                      <strong>Pediatric CPR, AED, and FIRST AID</strong>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-3 col-sm-3">
+                      <strong className="text-success">Completed</strong>
+                    </div>
+                    <div className="col-md-3 col-sm-3">
                       <button
-                        className={styles.scheduletag}
-                        onClick={() => this._showModal("React")}
-                      >
+                         className={cx("btn btn-primary float-right",style.disablecursor)}>
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-3 col-sm-3">
+                      <span className={styles.scheduletag}>10 Feb 2020
+                      </span>
+                      <br></br>
+                      11:00 AM
+                    </div>
+                    <div className="col-md-3 col-sm-3">
+                      <strong>HEARTSAVER FIRST AID</strong>
+                    </div>
+                    <div className="col-md-3 col-sm-3">
+                      <strong className="text-primary">In Progress</strong>
+                    </div>
+                    <div className="col-md-3 col-sm-3">
+                      <button
+                         className={cx("btn btn-primary float-right",style.disablecursor)}
+                       >
                         Register
                       </button>
                     </div>
@@ -137,51 +168,36 @@ export default class Training extends React.Component {
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
-                      <span className={styles.scheduletag}>12:00 PM</span>
+                    <div className="col-md-3 col-sm-3">
+                      <span className={styles.scheduletag}>12 Feb 2020
+                     </span>
+                     <br></br>
+                      10:00 AM
                     </div>
-                    <div className="col-md-4">
-                      <strong>.Net</strong>
+                    <div className="col-md-3 col-sm-3">
+                      <strong>Clinical Bioinformatics: Unlocking Genomics in Healthcare</strong>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-3 col-sm-3">
+                      <strong className="text-danger">Scheduled</strong>
+                    </div>
+                    <div className="col-md-3 col-sm-3">
                       <button
-                        className={styles.scheduletag}
-                        onClick={() => this._showModal(".Net")}
+                         className="btn btn-primary float-right"
+                        onClick={() => this._showModal("Clinical Bioinformatics: Unlocking Genomics in Healthcare")}
                       >
                         Register
                       </button>
                     </div>
                   </div>
                 </div>
-                <div className={styles.schedulecard}>
-                  <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-4">
-                      <span className={styles.scheduletag}>4:00 PM</span>
-                    </div>
-                    <div className="col-md-4">
-                      <strong>Angular</strong>
-                    </div>
-                    <div className="col-md-4">
-                      <button
-                        className={styles.scheduletag}
-                        onClick={() => this._showModal("Angular")}
-                      >
-                        Register
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </div> 
               <Modal
-                titleAriaId="Request Form"
+                titleAriaId="Register Form"
                 isOpen={this.state.showModal}
                 onDismiss={this._closeModal}
                 isBlocking={false}
-                containerClassName={"container"}
               >
-                <span onClick={this._closeModal}>
-                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                </span>
+                <h3 onClick={this._closeModal} className={cx("float-right pr-2",style.popupclose)} aria-hidden="true">×</h3>
                 <Register classname={this.state.classname} />
               </Modal>
             </div>
@@ -196,8 +212,8 @@ export default class Training extends React.Component {
             aria-controls="collapseOne"
           >
             <h2 className={cx("mb-0", style.heading)}>
-              <button className="btn btn-link" type="button">
-                Online Trainings
+              <button className="btn" type="button">
+                Optional Trainings
               </button>
             </h2>
           </div>
@@ -211,47 +227,54 @@ export default class Training extends React.Component {
               <div className={styles.schedulewarp}>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
-                      <strong>React Advanced</strong>
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>20 Feb 2020 </span><br></br> 11:00 AM
                     </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                      <strong>Care Home Nursing: Changing Perceptions</strong>
                     </div>
-                  </div>
-                </div>
-                <div className={styles.schedulecard}>
-                  <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
-                      <strong>.Net Full Stack</strong>
-                    </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                      <button
+                         className="btn btn-primary float-right"
+                      >
+                        View
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                    <div className="col-md-6">
-                      <strong>Angular Deep Concepts</strong>
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>24 Feb 2020 </span>
+                      <br></br> 1:00 PM
                     </div>
-                    <div className="col-md-4">
-                      <button className={styles.scheduletag}>View</button>
+                    <div className="col-md-4 col-sm-4">
+                      <strong>First Aid for Adults</strong>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
+                    <button type="button" className="btn btn-primary  float-right">
+                    View
+                  </button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                  <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>3 March 2020</span> <br></br> 10:00 AM
+                    </div>
+                    <div className="col-md-4 col-sm-4">
+                      <strong>Service Improvement in Healthcare</strong>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
+                    <button type="button" className="btn btn-primary float-right">
+                      View
+                    </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <Modal
-                titleAriaId="Request Form"
-                isOpen={this.state.showModal}
-                onDismiss={this._closeModal}
-                isBlocking={false}
-                containerClassName={"container"}
-              >
-                <span onClick={this._closeModal}>
-                  <i className={cx("fa fa-times-circle-o", style.spclose)}></i>
-                </span>
-                <Register classname={this.state.classname} />
-              </Modal>
+             
             </div>
           </div>
         </div>
@@ -264,5 +287,5 @@ export default class Training extends React.Component {
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }

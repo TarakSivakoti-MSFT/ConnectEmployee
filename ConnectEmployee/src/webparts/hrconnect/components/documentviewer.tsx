@@ -16,7 +16,7 @@ public  onDocumentLoad({ numPages }) {
     return (
       <div>
         <Document
-          file="./pay-stub.pdf"
+          file="https://contosohealthsystem.sharepoint.com/:b:/s/ConnectEmployee/Ees0osQQlz5IphiP4cMqa80BPqDh1LhwSB8D_lKM6GhAiA?e=lSmSAv"
           onLoadSuccess={this.onDocumentLoad}
         >
           <Page

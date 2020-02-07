@@ -20,16 +20,9 @@
   .schedule{
     padding:100px 0px;
     background-color: #ecedf0;
-     font-family: 'Titillium Web';
   }
   .scheduletag{
-    color:#fff;
-    background-color: #007bff;
-    padding:3px 8px;
-    margin-right: 15px;
-    width: 90px;
-    font-family: 'Titillium Web';
-    text-align: center;
+    font-size: smaller;
   }
   .scheduleheader span{
     display: inline-block;
@@ -74,15 +67,10 @@
     -webkit-align-items: center;
     align-items: center;
     padding: 10px 20px;
-    color: #6164B2;
     transition: all 0.2s ease-in;
-  /*    justify-content: center;*/
   }
   
   .dayone{
-    margin-bottom:50px;
-    font-weight: bold;
-    font-size: 20px;
-    color: #007bff;    
+    margin-bottom:50px;  
     }
   }
