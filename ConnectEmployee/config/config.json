@@ -17,11 +17,29 @@
           "manifest": "./src/webparts/cafemenus/CafemenusWebPart.manifest.json"
         }
       ]
+    },
+    "employeeperks-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeperks/EmployeeperksWebPart.js",
+          "manifest": "./src/webparts/employeeperks/EmployeeperksWebPart.manifest.json"
+        }
+      ]
+    },
+    "workorderform-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/workorderform/WorkorderformWebPart.js",
+          "manifest": "./src/webparts/workorderform/WorkorderformWebPart.manifest.json"
+        }
+      ]
     }
   },
   "localizedResources": {
     "HrconnectWebPartStrings": "lib/webparts/hrconnect/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
-    "CafemenusWebPartStrings": "lib/webparts/cafemenus/loc/{locale}.js"
+    "CafemenusWebPartStrings": "lib/webparts/cafemenus/loc/{locale}.js",
+    "EmployeeperksWebPartStrings": "lib/webparts/employeeperks/loc/{locale}.js",
+    "WorkorderformWebPartStrings": "lib/webparts/workorderform/loc/{locale}.js"
   }
 }
