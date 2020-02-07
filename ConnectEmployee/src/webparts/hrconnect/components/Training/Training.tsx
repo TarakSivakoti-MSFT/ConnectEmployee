@@ -115,17 +115,16 @@ export default class Training extends React.Component {
                 </div>
               </div>
               <br></br> */}
-                <h2 className={cx("mb-0", style.heading)}>
-              <button className="btn" type="button">
-                Mandatory Trainings
-              </button>
-            </h2>
+              <h2 className={cx("mb-0", style.heading)}>
+                <button className="btn" type="button">
+                  Mandatory Trainings
+                </button>
+              </h2>
               <div className={styles.schedulewarp}>
-                  <div className={styles.schedulecard}>
+                <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
                     <div className="col-md-3 col-sm-3">
-                      <span className={styles.scheduletag}>10 Jan 2020
-                      </span>
+                      <span className={styles.scheduletag}>10 Jan 2020</span>
                       <br></br>
                       10:00 AM
                     </div>
@@ -137,17 +136,20 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                         className={cx("btn btn-primary float-right",style.disablecursor)}>
+                        className={cx(
+                          "btn btn-primary float-right",
+                          style.disablecursor
+                        )}
+                      >
                         Register
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className={styles.schedulecard}>
-                <div className={cx("row", styles.insidebox)}>
+                  <div className={cx("row", styles.insidebox)}>
                     <div className="col-md-3 col-sm-3">
-                      <span className={styles.scheduletag}>10 Feb 2020
-                      </span>
+                      <span className={styles.scheduletag}>10 Feb 2020</span>
                       <br></br>
                       11:00 AM
                     </div>
@@ -159,8 +161,11 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                         className={cx("btn btn-primary float-right",style.disablecursor)}
-                       >
+                        className={cx(
+                          "btn btn-primary float-right",
+                          style.disablecursor
+                        )}
+                      >
                         Register
                       </button>
                     </div>
@@ -169,35 +174,47 @@ export default class Training extends React.Component {
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
                     <div className="col-md-3 col-sm-3">
-                      <span className={styles.scheduletag}>12 Feb 2020
-                     </span>
-                     <br></br>
+                      <span className={styles.scheduletag}>12 Feb 2020</span>
+                      <br></br>
                       10:00 AM
                     </div>
                     <div className="col-md-3 col-sm-3">
-                      <strong>Clinical Bioinformatics: Unlocking Genomics in Healthcare</strong>
+                      <strong>
+                        Clinical Bioinformatics: Unlocking Genomics in
+                        Healthcare
+                      </strong>
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <strong className="text-danger">Scheduled</strong>
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                         className="btn btn-primary float-right"
-                        onClick={() => this._showModal("Clinical Bioinformatics: Unlocking Genomics in Healthcare")}
+                        className="btn btn-primary float-right"
+                        onClick={() =>
+                          this._showModal(
+                            "Clinical Bioinformatics: Unlocking Genomics in Healthcare"
+                          )
+                        }
                       >
                         Register
                       </button>
                     </div>
                   </div>
                 </div>
-              </div> 
+              </div>
               <Modal
                 titleAriaId="Register Form"
                 isOpen={this.state.showModal}
                 onDismiss={this._closeModal}
                 isBlocking={false}
               >
-                <h3 onClick={this._closeModal} className={cx("float-right pr-2",style.popupclose)} aria-hidden="true">×</h3>
+                <h3
+                  onClick={this._closeModal}
+                  className={cx("float-right pr-2", style.popupclose)}
+                  aria-hidden="true"
+                >
+                  ×
+                </h3>
                 <Register classname={this.state.classname} />
               </Modal>
             </div>
@@ -227,15 +244,33 @@ export default class Training extends React.Component {
               <div className={styles.schedulewarp}>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                  <div className="col-md-4 col-sm-4">
-                      <span className={styles.scheduletag}>20 Feb 2020 </span><br></br> 11:00 AM
+                    <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>20 Feb 2020 </span>
+                      <br></br> 11:00 AM
                     </div>
                     <div className="col-md-4 col-sm-4">
                       <strong>Care Home Nursing: Changing Perceptions</strong>
                     </div>
                     <div className="col-md-4 col-sm-4">
+                      <button className="btn btn-primary float-right">
+                        View
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.schedulecard}>
+                  <div className={cx("row", styles.insidebox)}>
+                    <div className="col-md-4 col-sm-4">
+                      <span className={styles.scheduletag}>24 Feb 2020 </span>
+                      <br></br> 1:00 PM
+                    </div>
+                    <div className="col-md-4 col-sm-4">
+                      <strong>First Aid for Adults</strong>
+                    </div>
+                    <div className="col-md-4 col-sm-4">
                       <button
-                         className="btn btn-primary float-right"
+                        type="button"
+                        className="btn btn-primary  float-right"
                       >
                         View
                       </button>
@@ -244,37 +279,24 @@ export default class Training extends React.Component {
                 </div>
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
-                  <div className="col-md-4 col-sm-4">
-                      <span className={styles.scheduletag}>24 Feb 2020 </span>
-                      <br></br> 1:00 PM
-                    </div>
                     <div className="col-md-4 col-sm-4">
-                      <strong>First Aid for Adults</strong>
-                    </div>
-                    <div className="col-md-4 col-sm-4">
-                    <button type="button" className="btn btn-primary  float-right">
-                    View
-                  </button>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.schedulecard}>
-                  <div className={cx("row", styles.insidebox)}>
-                  <div className="col-md-4 col-sm-4">
-                      <span className={styles.scheduletag}>3 March 2020</span> <br></br> 10:00 AM
+                      <span className={styles.scheduletag}>3 March 2020</span>{" "}
+                      <br></br> 10:00 AM
                     </div>
                     <div className="col-md-4 col-sm-4">
                       <strong>Service Improvement in Healthcare</strong>
                     </div>
                     <div className="col-md-4 col-sm-4">
-                    <button type="button" className="btn btn-primary float-right">
-                      View
-                    </button>
+                      <button
+                        type="button"
+                        className="btn btn-primary float-right"
+                      >
+                        View
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-             
             </div>
           </div>
         </div>
@@ -287,5 +309,5 @@ export default class Training extends React.Component {
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }

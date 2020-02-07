@@ -1,23 +1,30 @@
-import * as React from 'react';
-import * as ReactDom from 'react-dom';
-import { Version } from '@microsoft/sp-core-library';
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { Version } from "@microsoft/sp-core-library";
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+} from "@microsoft/sp-property-pane";
+import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { SPComponentLoader } from "@microsoft/sp-loader";
 
-import * as strings from 'CafemenusWebPartStrings';
-import Cafemenus from './components/Cafemenus';
-import { ICafemenusProps } from './components/ICafemenusProps';
+import * as strings from "CafemenusWebPartStrings";
+import Cafemenus from "./components/Cafemenus";
+import { ICafemenusProps } from "./components/ICafemenusProps";
+import "jquery";
+require("bootstrap");
 
 export interface ICafemenusWebPartProps {
   description: string;
 }
 
-export default class CafemenusWebPart extends BaseClientSideWebPart <ICafemenusWebPartProps> {
-
+export default class CafemenusWebPart extends BaseClientSideWebPart<
+  ICafemenusWebPartProps
+> {
   public render(): void {
+    let cssURL =
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
+    SPComponentLoader.loadCss(cssURL);
     const element: React.ReactElement<ICafemenusProps> = React.createElement(
       Cafemenus,
       {
@@ -33,7 +40,7 @@ export default class CafemenusWebPart extends BaseClientSideWebPart <ICafemenusW
   }
 
   protected get dataVersion(): Version {
-    return Version.parse('1.0');
+    return Version.parse("1.0");
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -47,7 +54,7 @@ export default class CafemenusWebPart extends BaseClientSideWebPart <ICafemenusW
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
+                PropertyPaneTextField("description", {
                   label: strings.DescriptionFieldLabel
                 })
               ]

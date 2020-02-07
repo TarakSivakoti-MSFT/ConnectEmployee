@@ -1,35 +1,39 @@
-import * as React from 'react';
+import * as React from "react";
 import style from "../scss/hrcontent.module.scss";
 import cx from "classnames";
 
 export interface IRegisterprops {
-  classname:string;
+  classname: string;
 }
 
 export default class Register extends React.Component<IRegisterprops> {
-  
   constructor(props: IRegisterprops) {
     super(props);
 
     this.state = {
-      classname:""
+      classname: ""
     };
   }
-  public render () {
- 
+  public render() {
     return (
-      <div  className={style.reqptocontainer}>
+      <div className={style.reqptocontainer}>
         <h5>Register for Training</h5>
-          <div className="form-group">
-              <label>Email address:</label>
-              <input type="email" className="form-control" id="email"/>
-          </div>
-          <div className="form-group">
+        <div className="form-group">
+          <label>Email address:</label>
+          <input type="email" className="form-control" id="email" />
+        </div>
+        <div className="form-group">
           <label>Class:</label>
-          <input type="text" className="form-control" id="class" value={this.props.classname} disabled/>
+          <input
+            type="text"
+            className="form-control"
+            id="class"
+            value={this.props.classname}
+            disabled
+          />
         </div>
         <button className="btn btn-primary">Submit</button>
-     </div>
+      </div>
     );
   }
 }

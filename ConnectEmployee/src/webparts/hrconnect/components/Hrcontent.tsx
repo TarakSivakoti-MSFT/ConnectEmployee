@@ -159,21 +159,26 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                 <div className={cx("card", style.card)}>
                   <div className="card-body">
                     <div className="row">
-                       <div className={cx("col-md-4",style.ptoblock)}>
-                        <span className={style.ptoheading}>Prior PTO Balance</span>
+                      <div className={cx("col-md-4", style.ptoblock)}>
+                        <span className={style.ptoheading}>
+                          Prior PTO Balance
+                        </span>
                         <div className="text-center">3</div>
-                       </div>
-                       <div className={cx("col-md-4",style.ptoblock)}>
-                        <span className={style.ptoheading}>Current Year Balance</span>
+                      </div>
+                      <div className={cx("col-md-4", style.ptoblock)}>
+                        <span className={style.ptoheading}>
+                          Current Year Balance
+                        </span>
                         <div className="text-center">7</div>
-                       </div>
-                       <div className={cx("col-md-4",style.ptoblock)}>
+                      </div>
+                      <div className={cx("col-md-4", style.ptoblock)}>
                         <span className={style.ptoheading}>Accurate Rate</span>
-                        <br/><br/>
+                        <br />
+                        <br />
                         <div className="text-center">2</div>
-                       </div>
+                      </div>
                     </div>
-                   
+
                     {/* <table className={cx("table  table-responsive",style.tableborder)}>
                       <tr>
                         <td className={style.tabletd}>
@@ -214,8 +219,14 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                       onDismiss={this._closeModal}
                       isBlocking={false}
                     >
-                       <h3 onClick={this._closeModal} className={cx("float-right pr-2",style.popupclose)} aria-hidden="true">×</h3>
-                       <Ptorequest />
+                      <h3
+                        onClick={this._closeModal}
+                        className={cx("float-right pr-2", style.popupclose)}
+                        aria-hidden="true"
+                      >
+                        ×
+                      </h3>
+                      <Ptorequest />
                     </Modal>
                   </div>
                 </div>
@@ -279,9 +290,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  }
+  };
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }
