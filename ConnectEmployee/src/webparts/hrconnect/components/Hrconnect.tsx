@@ -7,12 +7,12 @@ export default class Hrconnect extends React.Component<IHrconnectProps, {}> {
   public render(): React.ReactElement<IHrconnectProps> {
     return (
       <div className={styles.hrconnect}>
-          <div className={styles.row}>
-            <div className="col-12">
-              <Hrcontent />
-            </div>
+        <div className={styles.row}>
+          <div className="col-12">
+            <Hrcontent />
           </div>
         </div>
+      </div>
     );
   }
 }

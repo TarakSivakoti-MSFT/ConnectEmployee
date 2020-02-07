@@ -1,0 +1,17 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+
+.cafemenus {
+  .row {
+    @include ms-Grid-row;
+    padding: 10px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+  }
+
+  .active {
+    color: #fff !important;
+    background-color: #007bff !important;
+  }
+}

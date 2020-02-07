@@ -1,44 +1,37 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
 
 .training {
-.schedulewarp{
-    padding-right:20px;
-    padding-left:20px;
+  .schedulewarp {
+    padding-right: 20px;
+    padding-left: 20px;
     padding: 20px 30px;
     border: solid 1px #ddd;
     background-color: #f5f5f5;
     -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
     transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
   }
-  .schedule{
-    background-color:#fff;
+  .schedule {
+    background-color: #fff;
   }
   .schedulewarp:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,.07);
-    border: solid 1px rgba(100,40,145,.97);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    border: solid 1px rgba(100, 40, 145, 0.97);
   }
-  .schedule{
-    padding:100px 0px;
+  .schedule {
+    padding: 100px 0px;
     background-color: #ecedf0;
-     font-family: 'Titillium Web';
   }
-  .scheduletag{
-    color:#fff;
-    background-color: #007bff;
-    padding:3px 8px;
-    margin-right: 15px;
-    width: 90px;
-    font-family: 'Titillium Web';
-    text-align: center;
+  .scheduletag {
+    font-size: smaller;
   }
-  .scheduleheader span{
+  .scheduleheader span {
     display: inline-block;
-    margin-right:25px;
+    margin-right: 25px;
   }
-  .scheduleheader{
-    margin-bottom:80px;
+  .scheduleheader {
+    margin-bottom: 80px;
   }
-  .schedulecard{
+  .schedulecard {
     position: relative;
     margin-bottom: 0.7em;
   }
@@ -55,14 +48,14 @@
     height: 2px;
     width: 22px;
     background: #ddd;
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: -22px;
     transition: all 0.3s ease-in;
   }
-  .insidebox { 
-    box-shadow: 0 0px 5px rgba(0,0,0,.07);
+  .insidebox {
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.07);
     background: #ffffff;
     width: 100%;
     height: auto;
@@ -76,9 +69,8 @@
     padding: 10px 20px;
     transition: all 0.2s ease-in;
   }
-  
-  .dayone{
-    margin-bottom:50px;
-    font-weight: bold;   
-    }
+
+  .dayone {
+    margin-bottom: 50px;
   }
+}
