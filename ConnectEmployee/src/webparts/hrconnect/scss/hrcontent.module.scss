@@ -68,7 +68,6 @@
   .pto,
   .benefits,
   .dev {
-    font-family: "Teams Assets light";
     font-size: 18px;
     color: #6264a7;
   }
@@ -122,6 +121,26 @@
       float: right;
     }
   }
+  
+  .ptoheading{
+    font-size: smaller;
+    font-weight: bold;
+  }
+  .ptoblock
+  {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .ptooutline{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  .tableborder{
+    border-left: 1px solid rgb(224, 216, 216);
+    border-right: 1px solid rgb(224, 216, 216);
+    border-bottom: 1px solid rgb(224, 216, 216);
+    box-shadow: 5px 10px #888888;
+  }
 }
 .spclose {
   font-size: xx-large !important;
@@ -161,4 +180,8 @@
 .benefitlink:hover{
   text-decoration: none;
   color:#000000;
+}
+
+.disablecursor{
+  cursor: none !important;
 }

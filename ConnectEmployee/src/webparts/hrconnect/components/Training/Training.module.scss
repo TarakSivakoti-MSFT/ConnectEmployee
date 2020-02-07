@@ -20,16 +20,9 @@
   .schedule{
     padding:100px 0px;
     background-color: #ecedf0;
-     font-family: 'Titillium Web';
   }
   .scheduletag{
-    color:#fff;
-    background-color: #007bff;
-    padding:3px 8px;
-    margin-right: 15px;
-    width: 90px;
-    font-family: 'Titillium Web';
-    text-align: center;
+    font-size: smaller;
   }
   .scheduleheader span{
     display: inline-block;
@@ -78,7 +71,6 @@
   }
   
   .dayone{
-    margin-bottom:50px;
-    font-weight: bold;   
+    margin-bottom:50px;  
     }
   }
