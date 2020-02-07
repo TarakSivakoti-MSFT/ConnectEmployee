@@ -10,16 +10,13 @@
 }
 
 .hrcontent {
-  .tabletd{
-    border-right: 1px solid #d8d8d8;
-  }
   .paystubrow:hover .paystubrow {
     transform: scale(1.033);
     /* box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  .paystubrow{
-    transition: all .2s ease-in;
+  .paystubrow {
+    transition: all 0.2s ease-in;
   }
   .dis {
     padding: 10px;
@@ -43,7 +40,7 @@
       width: 45%;
     }
   }
- 
+
   button {
     text-decoration: blink !important;
   }
@@ -123,25 +120,18 @@
       float: right;
     }
   }
-  
-  .ptoheading{
+
+  .ptoheading {
     font-size: smaller;
     font-weight: bold;
   }
-  .ptoblock
-  {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-  }
-  .ptooutline{
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-  }
-  .tableborder{
-    border-left: 1px solid rgb(224, 216, 216);
-    
-    border-bottom: 1px solid rgb(224, 216, 216);
-    box-shadow: 5px 10px #888888;
+  .ptoblock {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4%;
+
+    &:hover {
+      background-color: rgb(149, 235, 235);
+    }
   }
   
 }
@@ -158,33 +148,29 @@
   width: 500px;
 }
 
-@media (max-width:1200px)
-{
+@media (max-width: 1200px) {
   .registercontainer,
-  .reqptocontainer
-  {
-    width:300px
+  .reqptocontainer {
+    width: 300px;
   }
 }
-@media (max-width:300px)
-{
+@media (max-width: 300px) {
   .registercontainer,
-  .reqptocontainer
-  {
-    width:200px
+  .reqptocontainer {
+    width: 200px;
   }
 }
-.popupclose{
+.popupclose {
   cursor: pointer;
 }
-.benefitlink{
-  color:#000000;
+.benefitlink {
+  color: #000000;
 }
-.benefitlink:hover{
+.benefitlink:hover {
   text-decoration: none;
-  color:#000000;
+  color: #000000;
 }
 
-.disablecursor{
-  cursor: none !important;
+.disablecursor {
+  cursor: default !important;
 }
