@@ -136,10 +136,7 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                        className={cx(
-                          "btn btn-primary float-right",
-                          style.disablecursor
-                        )}
+                        className={cx("btn float-right", style.btnclr,style.disablecursor)}
                       >
                         Register
                       </button>
@@ -161,10 +158,7 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                        className={cx(
-                          "btn btn-primary float-right",
-                          style.disablecursor
-                        )}
+                        className={cx("btn float-right", style.btnclr,style.disablecursor)}
                       >
                         Register
                       </button>
@@ -189,7 +183,7 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                        className="btn btn-primary float-right"
+                        className={cx("btn float-right", style.btnclr)}
                         onClick={() =>
                           this._showModal(
                             "Clinical Bioinformatics: Unlocking Genomics in Healthcare"
@@ -252,7 +246,7 @@ export default class Training extends React.Component {
                       <strong>Care Home Nursing: Changing Perceptions</strong>
                     </div>
                     <div className="col-md-4 col-sm-4">
-                      <button className="btn btn-primary float-right">
+                      <button className={cx("btn float-right", style.btnclr)}>
                         View
                       </button>
                     </div>
@@ -289,7 +283,7 @@ export default class Training extends React.Component {
                     <div className="col-md-4 col-sm-4">
                       <button
                         type="button"
-                        className="btn btn-primary float-right"
+                        className={cx("btn float-right", style.btnclr)}
                       >
                         View
                       </button>

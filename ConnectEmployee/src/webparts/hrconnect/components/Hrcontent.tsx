@@ -86,16 +86,19 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
     return (
       <div className={style.hrcontent}>
         <div className="accordion" id="hrcontent">
-          <div className="card">
+          <div className={cx("card", style.cbr)}>
             <div
-              className="card-header"
+              className={cx("card-header", style.ch)}
               data-toggle="collapse"
               data-target="#pay"
               aria-expanded="true"
               aria-controls="collapseOne"
             >
               <h2 className={cx("mb-0", style.heading)}>
-                <button className="btn btn-link" type="button">
+                <button
+                  className={cx("btn btn-link", style.btnclr)}
+                  type="button"
+                >
                   Pay
                 </button>
               </h2>
@@ -131,16 +134,19 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className={cx("card", style.cbr)}>
             <div
-              className="card-header"
+              className={cx("card-header", style.ch)}
               data-toggle="collapse"
               data-target="#pto"
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
               <h2 className={cx("mb-0", style.heading)}>
-                <button className="btn btn-link collapsed" type="button">
+                <button
+                  className={cx("btn btn-link collapsed", style.btnclr)}
+                  type="button"
+                >
                   PTO
                 </button>
               </h2>
@@ -197,16 +203,19 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className={cx("card", style.cbr)}>
             <div
-              className="card-header"
+              className={cx("card-header", style.ch)}
               data-toggle="collapse"
               data-target="#benefits"
               aria-expanded="false"
               aria-controls="collapseThree"
             >
               <h2 className={cx("mb-0", style.heading)}>
-                <button className="btn btn-link collapsed" type="button">
+                <button
+                  className={cx("btn btn-link collapsed", style.btnclr)}
+                  type="button"
+                >
                   Benefits
                 </button>
               </h2>
@@ -222,16 +231,19 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className={cx("card", style.cbr)}>
             <div
-              className="card-header"
+              className={cx("card-header", style.ch)}
               data-toggle="collapse"
               data-target="#training"
               aria-expanded="false"
               aria-controls="collapseFour"
             >
               <h2 className={cx("mb-0", style.heading)}>
-                <button className="btn btn-link collapsed" type="button">
+                <button
+                  className={cx("btn btn-link collapsed", style.btnclr)}
+                  type="button"
+                >
                   Training/Dev
                 </button>
               </h2>
