@@ -33,7 +33,7 @@ export default class Benefits extends React.Component {
                   <li className="list-group-item">
                     Medical Insurance{" "}
                     <span className="float-right">
-                      <i className="fa fa-check text-primary"></i>
+                      <i className="fa fa-check text-success"></i>
                     </span>
                   </li>
                 </a>
@@ -45,7 +45,7 @@ export default class Benefits extends React.Component {
                   <li className="list-group-item">
                     Retirement Benefits{" "}
                     <span className="float-right">
-                      <i className="fa fa-check text-primary"></i>
+                      <i className="fa fa-check text-success"></i>
                     </span>
                   </li>
                 </a>
@@ -57,7 +57,7 @@ export default class Benefits extends React.Component {
                   <li className="list-group-item">
                     Family Leave{" "}
                     <span className="float-right">
-                      <i className="fa fa-check text-primary"></i>
+                      <i className="fa fa-check text-success"></i>
                     </span>
                   </li>
                 </a>

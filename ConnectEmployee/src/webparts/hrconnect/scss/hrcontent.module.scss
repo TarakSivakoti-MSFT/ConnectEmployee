@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "Teams Assets";
-  src: url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EbI67qhodshHoDnu9mEcwsoB1IAgZ6tPSRGT0l4uH3TzYQ?e=QV3YNo")
+  src: url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EbI67qhodshHoDnu9mEcwsoB1IAgZ6tPSRGT0l4uH3TzYQ?e=DyGdOx")
       format("woff"),
-    url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EdyaTp2MoCNGjvfphCei9wsB3QUpGHZWEZTaxEVKhErjbQ?e=l5x0Ty")
+    url("https://contosohealthsystem.sharepoint.com/:u:/s/ConnectEmployee/EdyaTp2MoCNGjvfphCei9wsB3QUpGHZWEZTaxEVKhErjbQ?e=usULuU")
       format("woff2");
   font-style: normal;
 }
@@ -55,7 +55,7 @@
     vertical-align: middle;
   }
   .reqpto {
-    margin-top: 6%;
+    margin-top: 4%;
   }
   .deck {
     padding: 2rem;
@@ -128,10 +128,15 @@
   .ptoblock {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4%;
+    padding: 2%;
+    text-align: center;
 
     &:hover {
       background-color: rgb(149, 235, 235);
     }
+  }
+  img {
+    margin: auto;
   }
 }
 .spclose {
