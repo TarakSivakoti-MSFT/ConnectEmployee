@@ -10,6 +10,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'EmployeeperksWebPartStrings';
 import Employeeperks from './components/Employeeperks';
 import { IEmployeeperksProps } from './components/IEmployeeperksProps';
+import { SPComponentLoader } from "@microsoft/sp-loader";
 
 export interface IEmployeeperksWebPartProps {
   description: string;
@@ -18,6 +19,9 @@ export interface IEmployeeperksWebPartProps {
 export default class EmployeeperksWebPart extends BaseClientSideWebPart <IEmployeeperksWebPartProps> {
 
   public render(): void {
+    let cssURL =
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
+    SPComponentLoader.loadCss(cssURL);
     const element: React.ReactElement<IEmployeeperksProps> = React.createElement(
       Employeeperks,
       {

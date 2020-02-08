@@ -1,7 +1,6 @@
 import * as React from "react";
 import styles from "./Cafemenus.module.scss";
 import { ICafemenusProps } from "./ICafemenusProps";
-import { escape } from "@microsoft/sp-lodash-subset";
 
 import cx from "classnames";
 export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
@@ -43,6 +42,11 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             role="tabpanel"
             aria-labelledby="pills-home-tab"
           >
+            <object
+              width="100%"
+              height="600"
+              data="https://contosohealthsystem.sharepoint.com/:b:/s/ConnectEmployee/Ees0osQQlz5IphiP4cMqa80BPqDh1LhwSB8D_lKM6GhAiA?e=f8c7OC"
+            ></object>
           </div>
           <div
             className="tab-pane fade"
@@ -50,7 +54,11 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             role="tabpanel"
             aria-labelledby="pills-profile-tab"
           >
-            2
+            <object
+              width="100%"
+              height="600"
+              data="https://contosohealthsystem.sharepoint.com/:b:/s/ConnectEmployee/Ec5xFv6IMCRNqFrqU7TD_24Bqrj22922wcOkg1JuGNj4GA?e=bkMuxw"
+            ></object>
           </div>
         </div>
       </div>
