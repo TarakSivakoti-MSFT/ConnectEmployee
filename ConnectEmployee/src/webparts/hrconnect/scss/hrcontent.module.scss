@@ -55,7 +55,7 @@
     vertical-align: middle;
   }
   .reqpto {
-    margin-top: 4%;
+    margin-top: 5%;
   }
   .deck {
     padding: 2rem;
@@ -63,63 +63,63 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
-  .pay,
-  .pto,
-  .benefits,
-  .dev {
-    font-size: 18px;
-    color: #6264a7;
-  }
+  // .pay,
+  // .pto,
+  // .benefits,
+  // .dev {
+  //   font-size: 18px;
+  //   color: #6264a7;
+  // }
 
-  .pay {
-    &:before {
-      content: "\E5A2";
-      vertical-align: middle;
-    }
+  // .pay {
+  //   &:before {
+  //     content: "\E5A2";
+  //     vertical-align: middle;
+  //   }
 
-    &:after {
-      content: "\E41E";
-      margin-top: 1%;
-      float: right;
-    }
-  }
+  //   &:after {
+  //     content: "\E41E";
+  //     margin-top: 1%;
+  //     float: right;
+  //   }
+  // }
 
-  .pto {
-    &:before {
-      content: "\E503";
-      vertical-align: middle;
-    }
+  // .pto {
+  //   &:before {
+  //     content: "\E503";
+  //     vertical-align: middle;
+  //   }
 
-    &:after {
-      content: "\E41E";
-      margin-top: 1%;
-      float: right;
-    }
-  }
-  .benefits {
-    &:before {
-      content: "\E625";
-      vertical-align: middle;
-    }
+  //   &:after {
+  //     content: "\E41E";
+  //     margin-top: 1%;
+  //     float: right;
+  //   }
+  // }
+  // .benefits {
+  //   &:before {
+  //     content: "\E625";
+  //     vertical-align: middle;
+  //   }
 
-    &:after {
-      content: "\E41E";
-      margin-top: 1%;
-      float: right;
-    }
-  }
-  .dev {
-    &:before {
-      content: "\E912";
-      vertical-align: middle;
-    }
+  //   &:after {
+  //     content: "\E41E";
+  //     margin-top: 1%;
+  //     float: right;
+  //   }
+  // }
+  // .dev {
+  //   &:before {
+  //     content: "\E912";
+  //     vertical-align: middle;
+  //   }
 
-    &:after {
-      content: "\E41E";
-      margin-top: 1%;
-      float: right;
-    }
-  }
+  //   &:after {
+  //     content: "\E41E";
+  //     margin-top: 1%;
+  //     float: right;
+  //   }
+  // }
 
   .ptoheading {
     font-size: smaller;
@@ -139,17 +139,14 @@
     margin: auto;
   }
   .ch {
-    background-color: #DBE4E6 !important;
-    // border-bottom: 1px solid #a61d40;
+    background-color: #dbe4e6 !important;
   }
-  .btnclr{
+  .btnclr {
     color: #a61d40;
   }
-  .cbr{
-    // border: 1px solid #a61d40;
+  .cbr {
     box-shadow: 0 2px 4px 0 #a61d40;
   }
- 
 }
 .spclose {
   font-size: xx-large !important;

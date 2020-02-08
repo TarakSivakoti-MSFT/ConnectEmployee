@@ -8,7 +8,22 @@
     margin: 0;
     text-align: center;
   }
-  .br{
+  .br {
     width: 600px;
+  }
+  .navwd {
+    width: 50% !important;
+    text-align: center;
+  }
+  .brrad {
+    border-radius: 0 !important;
+  }
+  .btnclr{
+    color: #ffffff;
+    background-color: #a61d40;
+    border-radius: 0 !important;
+    &:hover{
+      color: #ffffff;
+    }
   }
 }

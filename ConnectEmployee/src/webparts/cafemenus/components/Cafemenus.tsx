@@ -8,9 +8,9 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
     return (
       <div className={styles.cafemenus}>
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className="nav-item">
+          <li className={cx("nav-item", styles.navwd)}>
             <a
-              className="nav-link active"
+              className={cx("nav-link", "active", styles.brrad)}
               id="pills-home-tab"
               data-toggle="pill"
               href="#pills-home"
@@ -21,9 +21,9 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
               Garden View Menu​​​​​​​
             </a>
           </li>
-          <li className="nav-item">
+          <li className={cx("nav-item", styles.navwd)}>
             <a
-              className="nav-link"
+              className={cx("nav-link", styles.brrad)}
               id="pills-profile-tab"
               data-toggle="pill"
               href="#pills-profile"
@@ -42,10 +42,16 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             role="tabpanel"
             aria-labelledby="pills-home-tab"
           >
-            <object
+            {/* srini enable */}
+            {/* <object
               width="100%"
               height="600"
               data="https://contosohealthsystem.sharepoint.com/:b:/s/ConnectEmployee/Ees0osQQlz5IphiP4cMqa80BPqDh1LhwSB8D_lKM6GhAiA?e=f8c7OC"
+            ></object> */}
+            <object
+              width="100%"
+              height="600"
+              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/Eaq0OEHQNhtDsUT6iDYex5AB_p2v_Ow8ZdGVYdVszQczXg?e=Iyys25"
             ></object>
           </div>
           <div
@@ -54,10 +60,16 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             role="tabpanel"
             aria-labelledby="pills-profile-tab"
           >
-            <object
+            {/* srini enable */}
+            {/* <object
               width="100%"
               height="600"
               data="https://contosohealthsystem.sharepoint.com/:b:/s/ConnectEmployee/Ec5xFv6IMCRNqFrqU7TD_24Bqrj22922wcOkg1JuGNj4GA?e=bkMuxw"
+            ></object> */}
+            <object
+              width="100%"
+              height="600"
+              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/EVMILP6rtv1EiA6NcAVFSSUBGk_23lSyzJJKStmfPNypKQ?e=ez4Jip"
             ></object>
           </div>
         </div>
