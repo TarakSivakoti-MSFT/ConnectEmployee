@@ -326,9 +326,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  };
+  }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }

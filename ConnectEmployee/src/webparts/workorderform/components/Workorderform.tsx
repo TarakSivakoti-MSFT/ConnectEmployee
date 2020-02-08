@@ -14,9 +14,9 @@ export default class Workorderform extends React.Component<
     return (
       <div className={styles.workorderform}>
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className="nav-item">
+          <li className={cx("nav-item", styles.navwd)}>
             <a
-              className="nav-link active"
+              className={cx("nav-link", "active", styles.brrad)}
               id="incident"
               data-toggle="pill"
               href="#Incident"
@@ -27,10 +27,10 @@ export default class Workorderform extends React.Component<
               Incident Report Form
             </a>
           </li>
-          <li className="nav-item">
+          <li className={cx("nav-item", styles.navwd)}>
             <a
-              className="nav-link"
-              id="equipment"
+              className={cx("nav-link", styles.brrad)}
+              id="equipment"  
               data-toggle="pill"
               href="#Equipment"
               role="tab"
@@ -70,7 +70,7 @@ export default class Workorderform extends React.Component<
                 <input type="text" className="form-control" required />
               </div>
               <div className={cx(styles.align)}>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className={cx("btn",styles.btnclr)}>
                   Submit
                 </button>
               </div>
@@ -101,7 +101,7 @@ export default class Workorderform extends React.Component<
                 <input type="text" className="form-control" required />
               </div>
               <div className={cx(styles.align)}>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className={cx("btn",styles.btnclr)}>
                   Submit
                 </button>
               </div>

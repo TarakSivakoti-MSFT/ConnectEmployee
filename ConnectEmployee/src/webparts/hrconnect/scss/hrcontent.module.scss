@@ -12,7 +12,6 @@
 .hrcontent {
   .paystubrow:hover .paystubrow {
     transform: scale(1.033);
-    /* box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .paystubrow {
@@ -137,6 +136,17 @@
   }
   img {
     margin: auto;
+  }
+  .ch {
+    background-color: #dbe4e6 !important;
+    // border-bottom: 1px solid #a61d40;
+  }
+  .btnclr {
+    color: #a61d40;
+  }
+  .cbr {
+    // border: 1px solid #a61d40;
+    box-shadow: 0 2px 4px 0 #a61d40;
   }
 }
 .spclose {

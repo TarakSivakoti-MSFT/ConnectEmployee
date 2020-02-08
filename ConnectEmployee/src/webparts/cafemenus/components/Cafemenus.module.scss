@@ -5,13 +5,22 @@
     @include ms-Grid-row;
     padding: 10px;
   }
-
+  a:hover {
+    background-color: whitesmoke;
+  }
   .column {
     @include ms-Grid-col;
   }
 
   .active {
     color: #fff !important;
-    background-color: #007bff !important;
+    background-color: #a61d40 !important;
+  }
+  .navwd {
+    width: 50% !important;
+    text-align: center;
+  }
+  .brrad {
+    border-radius: 0 !important;
   }
 }
