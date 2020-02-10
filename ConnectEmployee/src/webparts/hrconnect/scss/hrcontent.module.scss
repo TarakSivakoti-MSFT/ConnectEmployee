@@ -124,6 +124,11 @@
   //     float: right;
   //   }
   // }
+  @media screen and (max-width: 425px) {
+    .logo {
+      width: 50% !important;
+    }
+  }
 
   .ptoheading {
     font-size: smaller;

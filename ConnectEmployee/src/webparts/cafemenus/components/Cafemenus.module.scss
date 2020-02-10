@@ -12,7 +12,7 @@
     @include ms-Grid-col;
   }
 
-  .active {
+  a.active {
     color: #fff !important;
     background-color: #a61d40 !important;
   }
@@ -26,5 +26,11 @@
   .logo {
     background-repeat: no-repeat;
     width: 20%;
+  }
+
+  @media screen and (max-width: 425px) {
+    .logo {
+      width: 50% !important;
+    }
   }
 }

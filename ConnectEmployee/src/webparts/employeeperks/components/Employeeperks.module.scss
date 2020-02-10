@@ -19,4 +19,9 @@
     background-repeat: no-repeat;
     width: 20%;
   }
+  @media screen and (max-width: 425px) {
+    .logo {
+      width: 50% !important;
+    }
+  }
 }
