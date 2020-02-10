@@ -85,9 +85,10 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
     const { firstDayOfWeek } = this.state;
     return (
       <div className={style.hrcontent}>
-        <div className={style.logo}>
-          <img src={logo} alt="logoogog"/>
-        </div>
+        <img
+          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          className={style.logo}
+        />
         <div className="accordion" id="hrcontent">
           <div className={cx("card", style.cbr)}>
             <div
@@ -269,9 +270,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  };
+  }
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  };
+  }
 }

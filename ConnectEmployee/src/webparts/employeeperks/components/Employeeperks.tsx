@@ -12,6 +12,10 @@ export default class Employeeperks extends React.Component<
   public render(): React.ReactElement<IEmployeeperksProps> {
     return (
       <div className={styles.employeeperks}>
+        <img
+          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          className={styles.logo}
+        />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li className={cx("nav-item", styles.navwd)}>
             <a

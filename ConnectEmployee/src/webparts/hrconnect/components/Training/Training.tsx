@@ -136,9 +136,13 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                        className={cx("btn float-right", style.btnclr,style.disablecursor)}
+                        className={cx(
+                          "btn float-right",
+                          style.btnclr,
+                          style.disablecursor
+                        )}
                       >
-                        Register
+                        {/* Register */}
                       </button>
                     </div>
                   </div>
@@ -158,9 +162,13 @@ export default class Training extends React.Component {
                     </div>
                     <div className="col-md-3 col-sm-3">
                       <button
-                        className={cx("btn float-right", style.btnclr,style.disablecursor)}
+                        className={cx(
+                          "btn float-right",
+                          style.btnclr,
+                          style.disablecursor
+                        )}
                       >
-                        Register
+                        {/* Register */}
                       </button>
                     </div>
                   </div>
@@ -246,8 +254,15 @@ export default class Training extends React.Component {
                       <strong>Care Home Nursing: Changing Perceptions</strong>
                     </div>
                     <div className="col-md-4 col-sm-4">
-                      <button className={cx("btn float-right", style.btnclr)}>
-                        View
+                      <button
+                        className={cx("btn float-right", style.btnclr)}
+                        onClick={() =>
+                          this._showModal(
+                            "Care Home Nursing: Changing Perceptions"
+                          )
+                        }
+                      >
+                        Register
                       </button>
                     </div>
                   </div>
@@ -265,8 +280,9 @@ export default class Training extends React.Component {
                       <button
                         type="button"
                         className={cx("btn float-right", style.btnclr)}
+                        onClick={() => this._showModal("First Aid for Adults")}
                       >
-                        View
+                        Register
                       </button>
                     </div>
                   </div>
@@ -274,7 +290,7 @@ export default class Training extends React.Component {
                 <div className={styles.schedulecard}>
                   <div className={cx("row", styles.insidebox)}>
                     <div className="col-md-4 col-sm-4">
-                      <span className={styles.scheduletag}>3 March 2020</span>{" "}
+                      <span className={styles.scheduletag}>3 March 2020</span>
                       <br></br> 10:00 AM
                     </div>
                     <div className="col-md-4 col-sm-4">
@@ -284,8 +300,11 @@ export default class Training extends React.Component {
                       <button
                         type="button"
                         className={cx("btn float-right", style.btnclr)}
+                        onClick={() =>
+                          this._showModal("Service Improvement in Healthcare")
+                        }
                       >
-                        View
+                        Register
                       </button>
                     </div>
                   </div>

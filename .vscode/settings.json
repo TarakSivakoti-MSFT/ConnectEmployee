@@ -2,11 +2,23 @@
     "cSpell.words": [
         "Hrcontent",
         "Ptorequest",
+        "Registerprops",
         "Tabledata",
         "btnclr",
         "cafemenus",
+        "classname",
         "datewidth",
+        "disablecursor",
+        "insidebox",
+        "onlineclasses",
+        "popupclose",
         "ptoalign",
-        "reqpto"
+        "reqpto",
+        "reqptocontainer",
+        "schedulecard",
+        "scheduleclasses",
+        "scheduletag",
+        "schedulewarp",
+        "trainingdata"
     ]
 }

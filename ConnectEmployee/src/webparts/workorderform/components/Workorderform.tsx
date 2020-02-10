@@ -13,6 +13,10 @@ export default class Workorderform extends React.Component<
   public render(): React.ReactElement<IWorkorderformProps> {
     return (
       <div className={styles.workorderform}>
+        <img
+          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          className={styles.logo}
+        />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li className={cx("nav-item", styles.navwd)}>
             <a
@@ -30,7 +34,7 @@ export default class Workorderform extends React.Component<
           <li className={cx("nav-item", styles.navwd)}>
             <a
               className={cx("nav-link", styles.brrad)}
-              id="equipment"  
+              id="equipment"
               data-toggle="pill"
               href="#Equipment"
               role="tab"
@@ -70,7 +74,7 @@ export default class Workorderform extends React.Component<
                 <input type="text" className="form-control" required />
               </div>
               <div className={cx(styles.align)}>
-                <button type="submit" className={cx("btn",styles.btnclr)}>
+                <button type="submit" className={cx("btn", styles.btnclr)}>
                   Submit
                 </button>
               </div>
@@ -101,7 +105,7 @@ export default class Workorderform extends React.Component<
                 <input type="text" className="form-control" required />
               </div>
               <div className={cx(styles.align)}>
-                <button type="submit" className={cx("btn",styles.btnclr)}>
+                <button type="submit" className={cx("btn", styles.btnclr)}>
                   Submit
                 </button>
               </div>

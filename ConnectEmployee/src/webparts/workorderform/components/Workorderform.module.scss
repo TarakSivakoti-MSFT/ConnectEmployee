@@ -18,12 +18,16 @@
   .brrad {
     border-radius: 0 !important;
   }
-  .btnclr{
+  .btnclr {
     color: #ffffff;
     background-color: #a61d40;
     border-radius: 0 !important;
-    &:hover{
+    &:hover {
       color: #ffffff;
     }
+  }
+  .logo {
+    background-repeat: no-repeat;
+    width: 20%;
   }
 }
