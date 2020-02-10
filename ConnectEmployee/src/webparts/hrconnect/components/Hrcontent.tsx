@@ -11,6 +11,7 @@ import {
   IDatePickerStrings
 } from "office-ui-fabric-react/lib/DatePicker";
 import { Modal, IDragOptions } from "office-ui-fabric-react/lib/Modal";
+
 const DayPickerStrings: IDatePickerStrings = {
   months: [
     "January",
@@ -84,8 +85,10 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
     const { firstDayOfWeek } = this.state;
     return (
       <div className={style.hrcontent}>
+        <div className={style.logo}>
+          <img src={logo} alt="logoogog"/>
+        </div>
         <div className="accordion" id="hrcontent">
-          <div className={style.logo}></div>
           <div className={cx("card", style.cbr)}>
             <div
               className={cx("card-header", style.ch)}
