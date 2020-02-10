@@ -10,7 +10,6 @@ import {
   DayOfWeek,
   IDatePickerStrings
 } from "office-ui-fabric-react/lib/DatePicker";
-import Documentviewer from "./documentviewer";
 import { Modal, IDragOptions } from "office-ui-fabric-react/lib/Modal";
 const DayPickerStrings: IDatePickerStrings = {
   months: [
@@ -86,6 +85,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
     return (
       <div className={style.hrcontent}>
         <div className="accordion" id="hrcontent">
+          <div className={style.logo}></div>
           <div className={cx("card", style.cbr)}>
             <div
               className={cx("card-header", style.ch)}
