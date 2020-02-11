@@ -57,7 +57,7 @@
   .insidebox {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.07);
     background: #ffffff;
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     display: -moz-flex;
@@ -72,5 +72,11 @@
 
   .dayone {
     margin-bottom: 50px;
+  }
+  @media screen and (max-width: 425px) {
+    .schedulecard,
+    .button {
+      font-size: smaller;
+    }
   }
 }

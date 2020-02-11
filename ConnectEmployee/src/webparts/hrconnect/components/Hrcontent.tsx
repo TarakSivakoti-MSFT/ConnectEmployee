@@ -158,7 +158,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
             <div id="pto" className="collapse" data-parent="#hrcontent">
               <div className={cx("card-deck", style.deck)}>
                 <div className={cx("card", style.card)}>
-                  <div className="card-body">
+                  <div className={cx("card-body", style.cbody)}>
                     <div className="row">
                       <div className={cx("col-md-4", style.ptoblock)}>
                         <span className={style.ptoheading}>
@@ -183,7 +183,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
                   onClick={this._showModal}
                   className={cx("card", style.card)}
                 >
-                  <div className="card-body">
+                  <div className={cx("card-body", style.cbody)}>
                     <h5 className={cx("card-title", style.reqpto)}>
                       Request PTO
                     </h5>
@@ -230,7 +230,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-labelledby="headingThree"
               data-parent="#hrcontent"
             >
-              <div className="card-body">
+              <div className={cx("card-body", style.cbody)}>
                 <Benefits />
               </div>
             </div>
@@ -258,7 +258,7 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
               aria-labelledby="collapseFour"
               data-parent="#hrcontent"
             >
-              <div className="card-body">
+              <div className={cx("card-body", style.cbody)}>
                 <Training />
               </div>
             </div>
@@ -270,9 +270,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
 
   private _showModal = (): void => {
     this.setState({ showModal: true });
-  }
+  };
 
   private _closeModal = (): void => {
     this.setState({ showModal: false });
-  }
+  };
 }
