@@ -22,7 +22,8 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
               aria-controls="pills-home"
               aria-selected="true"
             >
-              Garden View Menu​​​​​​​
+              {/* srini enable Garden View Menu​​​​​​​ */}
+              Exterior Menu
             </a>
           </li>
           <li className={cx("nav-item", styles.navwd)}>
@@ -35,7 +36,8 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
               aria-controls="pills-profile"
               aria-selected="false"
             >
-              Courtyard Menu
+              {/* srini enable Courtyard Menu */}
+              Interior Menu
             </a>
           </li>
         </ul>
@@ -55,7 +57,7 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             <object
               width="100%"
               height="600"
-              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/Eaq0OEHQNhtDsUT6iDYex5AB_p2v_Ow8ZdGVYdVszQczXg?e=Iyys25"
+              data="https://m365x520260.sharepoint.com/:i:/s/ConnectEmployee/EVu-VaEHwHpIswSGJaMPRA4Bbwm2D3Rvq8UWFOHNCb3CPw?e=5P9AfR"
             ></object>
           </div>
           <div
@@ -73,7 +75,7 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             <object
               width="100%"
               height="600"
-              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/EVMILP6rtv1EiA6NcAVFSSUBGk_23lSyzJJKStmfPNypKQ?e=ez4Jip"
+              data="https://m365x520260.sharepoint.com/:i:/s/ConnectEmployee/ETxXCGisUj5NnfRLMTuHaUsBgqTGtGfdX1lVlhG5h-mpVg?e=euRBQk"
             ></object>
           </div>
         </div>
