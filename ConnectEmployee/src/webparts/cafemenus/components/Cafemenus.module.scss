@@ -12,13 +12,13 @@
     @include ms-Grid-col;
   }
 
-
-  .active{
+  .active {
     color: #fff !important;
     background-color: #a6093d !important;
   }
-  a{
-    color: #a6093d !important;
+  a {
+    // color: #a6093d !important; //add for admin
+    color:black;
   }
   .navwd {
     width: 50% !important;

@@ -13,14 +13,18 @@ export default class Employeeperks extends React.Component<
     return (
       <div className={styles.employeeperks}>
         <img
-          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          // enable for admin
+          // src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/Intelligent%20Health%202.png"
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)}  onClick={() =>this._changeActive( "pills-home-tab")}
-              >
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("pills-home-tab")}
+          >
             <a
-              className={cx("nav-link active", styles.brrad,styles.active)}
+              className={cx("nav-link active", styles.brrad)} //styles.active add for admin
               id="pills-home-tab"
               data-toggle="pill"
               href="#Employee-Discounts"
@@ -31,7 +35,10 @@ export default class Employeeperks extends React.Component<
               Employee Discounts
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "Community-perks")}>
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("Community-perks")}
+          >
             <a
               className={cx("nav-link", styles.brrad)}
               id="Community-perks"
@@ -44,7 +51,10 @@ export default class Employeeperks extends React.Component<
               Community Perks
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "Travel-discounts")}>
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("Travel-discounts")}
+          >
             <a
               className={cx("nav-link", styles.brrad)}
               id="Travel-discounts"
@@ -57,7 +67,10 @@ export default class Employeeperks extends React.Component<
               Travel Discounts
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "child-benefits-tab")}>
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("child-benefits-tab")}
+          >
             <a
               className={cx("nav-link", styles.brrad)}
               id="child-benefits-tab"
@@ -293,9 +306,9 @@ export default class Employeeperks extends React.Component<
       </div>
     );
   }
-
-   public _changeActive(currentitem: string){
-     $('.nav-link').removeClass(styles.active);
-     $("#"+currentitem).addClass(styles.active);
-   }
+// enable for admin
+  //  public _changeActive(currentitem: string){
+  //    $('.nav-link').removeClass(styles.active);
+  //    $("#"+currentitem).addClass(styles.active);
+  //  }
 }

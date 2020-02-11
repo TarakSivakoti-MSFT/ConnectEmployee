@@ -86,7 +86,9 @@ export default class Hrcontent extends React.Component<{}, IDatePickerState> {
     return (
       <div className={style.hrcontent}>
         <img
-          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          // enable for admin account
+          // src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/Intelligent%20Health%202.png"
           className={style.logo}
         />
         <div className="accordion" id="hrcontent">

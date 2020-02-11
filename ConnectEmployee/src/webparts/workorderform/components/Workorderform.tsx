@@ -14,13 +14,18 @@ export default class Workorderform extends React.Component<
     return (
       <div className={styles.workorderform}>
         <img
-          src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          // enable for admin
+          // src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
+          src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/Intelligent%20Health%202.png"
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "incident")}>
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("incident")}
+          >
             <a
-              className={cx("nav-link", "active", styles.brrad,styles.active)}
+              className={cx("nav-link", "active", styles.brrad)} //styles.active add for admin
               id="incident"
               data-toggle="pill"
               href="#Incident"
@@ -31,7 +36,10 @@ export default class Workorderform extends React.Component<
               Incident Report Form
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "equipment")}>
+          <li
+            className={cx("nav-item", styles.navwd)}
+            // onClick={() => this._changeActive("equipment")}
+          >
             <a
               className={cx("nav-link", styles.brrad)}
               id="equipment"
@@ -115,8 +123,10 @@ export default class Workorderform extends React.Component<
       </div>
     );
   }
-  public _changeActive(currentitem: string){
-    $('.nav-link').removeClass(styles.active);
-    $("#"+currentitem).addClass(styles.active);
-  }
+
+  // enable for admin
+  // public _changeActive(currentitem: string) {
+  //   $(".nav-link").removeClass(styles.active);
+  //   $("#" + currentitem).addClass(styles.active);
+  // }
 }

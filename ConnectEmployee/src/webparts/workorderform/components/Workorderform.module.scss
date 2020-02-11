@@ -20,18 +20,20 @@
   }
   .btnclr {
     color: #ffffff;
-    background-color: #a61d40;
+    // background-color: #a61d40; //enable for admin ac
+    background-color: #007bff;
     border-radius: 0 !important;
     &:hover {
       color: #ffffff;
     }
   }
-  .active{
+  .active {
     color: #fff !important;
     background-color: #a6093d !important;
   }
-  a{
-    color: #a6093d !important;
+  a {
+    // color: #a6093d !important; //add for admin
+    color: black;
   }
   .logo {
     background-repeat: no-repeat;
