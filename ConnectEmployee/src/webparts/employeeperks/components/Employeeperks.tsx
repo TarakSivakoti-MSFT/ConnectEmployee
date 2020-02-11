@@ -33,8 +33,8 @@ export default class Employeeperks extends React.Component<
           </li>
           <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "Community-perks")}>
             <a
-              className={cx("nav-link", styles.brrad)} 
-              id="Community-perks" 
+              className={cx("nav-link", styles.brrad)}
+              id="Community-perks"
               data-toggle="pill"
               href="#Community-Perks"
               role="tab"
@@ -81,7 +81,7 @@ export default class Employeeperks extends React.Component<
             <h1>Employee Discounts</h1>
             <p>
               The terms perks and benefits are sometimes used interchangeably,
-              but for our purposes, benefits are generally a form of noncash
+              but for our purposes, benefits are generally a form of non cash
               compensation that cover basic needs. If not offered by the
               employer, employees would likely have to fund them on their own.
             </p>
@@ -294,8 +294,8 @@ export default class Employeeperks extends React.Component<
     );
   }
 
-   public _changeActive(currentitem){
+   public _changeActive(currentitem: string){
      $('.nav-link').removeClass(styles.active);
-     $("#"+currentitem).addClass(styles.active)
+     $("#"+currentitem).addClass(styles.active);
    }
 }

@@ -83,8 +83,8 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
     );
   }
 
-  public _changeActive(currentitem){
+  public _changeActive(currentitem: string){
     $('.nav-link').removeClass(styles.active);
-    $("#"+currentitem).addClass(styles.active)
+    $("#"+currentitem).addClass(styles.active);
   }
 }

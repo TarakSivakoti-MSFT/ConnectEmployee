@@ -115,8 +115,8 @@ export default class Workorderform extends React.Component<
       </div>
     );
   }
-  public _changeActive(currentitem){
+  public _changeActive(currentitem: string){
     $('.nav-link').removeClass(styles.active);
-    $("#"+currentitem).addClass(styles.active)
+    $("#"+currentitem).addClass(styles.active);
   }
 }
