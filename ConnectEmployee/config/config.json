@@ -33,6 +33,14 @@
           "manifest": "./src/webparts/workorderform/WorkorderformWebPart.manifest.json"
         }
       ]
+    },
+    "staffnews-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/staffnews/StaffnewsWebPart.js",
+          "manifest": "./src/webparts/staffnews/StaffnewsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "localizedResources": {
@@ -40,6 +48,7 @@
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "CafemenusWebPartStrings": "lib/webparts/cafemenus/loc/{locale}.js",
     "EmployeeperksWebPartStrings": "lib/webparts/employeeperks/loc/{locale}.js",
-    "WorkorderformWebPartStrings": "lib/webparts/workorderform/loc/{locale}.js"
+    "WorkorderformWebPartStrings": "lib/webparts/workorderform/loc/{locale}.js",
+    "StaffnewsWebPartStrings": "lib/webparts/staffnews/loc/{locale}.js"
   }
 }
