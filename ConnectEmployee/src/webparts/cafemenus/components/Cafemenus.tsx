@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./Cafemenus.module.scss";
 import { ICafemenusProps } from "./ICafemenusProps";
-
+import * as $ from "jquery";
 import cx from "classnames";
 export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
   public render(): React.ReactElement<ICafemenusProps> {
@@ -12,10 +12,10 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "exterior")}>
             <a
-              className={cx("nav-link", "active", styles.brrad)}
-              id="pills-home-tab"
+              className={cx("nav-link", "active", styles.brrad,styles.active)}
+              id="exterior"
               data-toggle="pill"
               href="#pills-home"
               role="tab"
@@ -26,10 +26,10 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
               Exterior Menu
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "interior")}>
             <a
               className={cx("nav-link", styles.brrad)}
-              id="pills-profile-tab"
+              id="interior"
               data-toggle="pill"
               href="#pills-profile"
               role="tab"
@@ -46,7 +46,7 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             className="tab-pane fade show active"
             id="pills-home"
             role="tabpanel"
-            aria-labelledby="pills-home-tab"
+            aria-labelledby="exterior"
           >
             {/* srini enable */}
             {/* <object
@@ -64,7 +64,7 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             className="tab-pane fade"
             id="pills-profile"
             role="tabpanel"
-            aria-labelledby="pills-profile-tab"
+            aria-labelledby="interior"
           >
             {/* srini enable */}
             {/* <object
@@ -81,5 +81,10 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
         </div>
       </div>
     );
+  }
+
+  public _changeActive(currentitem){
+    $('.nav-link').removeClass(styles.active);
+    $("#"+currentitem).addClass(styles.active)
   }
 }

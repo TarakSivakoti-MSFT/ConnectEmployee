@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./Workorderform.module.scss";
 import { IWorkorderformProps } from "./IWorkorderformProps";
-import "jquery";
+import * as $ from "jquery";
 require("bootstrap");
 import Dates from "../components/Dates";
 import cx from "classnames";
@@ -18,9 +18,9 @@ export default class Workorderform extends React.Component<
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "incident")}>
             <a
-              className={cx("nav-link", "active", styles.brrad)}
+              className={cx("nav-link", "active", styles.brrad,styles.active)}
               id="incident"
               data-toggle="pill"
               href="#Incident"
@@ -31,7 +31,7 @@ export default class Workorderform extends React.Component<
               Incident Report Form
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "equipment")}>
             <a
               className={cx("nav-link", styles.brrad)}
               id="equipment"
@@ -114,5 +114,9 @@ export default class Workorderform extends React.Component<
         </div>
       </div>
     );
+  }
+  public _changeActive(currentitem){
+    $('.nav-link').removeClass(styles.active);
+    $("#"+currentitem).addClass(styles.active)
   }
 }

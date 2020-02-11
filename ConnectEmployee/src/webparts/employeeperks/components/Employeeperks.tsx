@@ -295,7 +295,7 @@ export default class Employeeperks extends React.Component<
   }
 
    public _changeActive(currentitem){
-     $('.nav-link').removeClass("active_86f0cdc3");
-     $("#"+currentitem).addClass("active_86f0cdc3")
+     $('.nav-link').removeClass(styles.active);
+     $("#"+currentitem).addClass(styles.active)
    }
 }
