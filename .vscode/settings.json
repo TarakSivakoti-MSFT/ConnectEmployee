@@ -19,6 +19,7 @@
         "scheduleclasses",
         "scheduletag",
         "schedulewarp",
+        "staffnews",
         "trainingdata"
     ]
 }
