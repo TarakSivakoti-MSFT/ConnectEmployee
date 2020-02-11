@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./Cafemenus.module.scss";
 import { ICafemenusProps } from "./ICafemenusProps";
-
+import * as $ from "jquery";
 import cx from "classnames";
 export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
   public render(): React.ReactElement<ICafemenusProps> {
@@ -12,30 +12,32 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "exterior")}>
             <a
-              className={cx("nav-link", "active", styles.brrad)}
-              id="pills-home-tab"
+              className={cx("nav-link", "active", styles.brrad,styles.active)}
+              id="exterior"
               data-toggle="pill"
               href="#pills-home"
               role="tab"
               aria-controls="pills-home"
               aria-selected="true"
             >
-              Garden View Menu​​​​​​​
+              {/* srini enable Garden View Menu​​​​​​​ */}
+              Exterior Menu
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "interior")}>
             <a
               className={cx("nav-link", styles.brrad)}
-              id="pills-profile-tab"
+              id="interior"
               data-toggle="pill"
               href="#pills-profile"
               role="tab"
               aria-controls="pills-profile"
               aria-selected="false"
             >
-              Courtyard Menu
+              {/* srini enable Courtyard Menu */}
+              Interior Menu
             </a>
           </li>
         </ul>
@@ -44,7 +46,7 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             className="tab-pane fade show active"
             id="pills-home"
             role="tabpanel"
-            aria-labelledby="pills-home-tab"
+            aria-labelledby="exterior"
           >
             {/* srini enable */}
             {/* <object
@@ -55,14 +57,14 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             <object
               width="100%"
               height="600"
-              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/Eaq0OEHQNhtDsUT6iDYex5AB_p2v_Ow8ZdGVYdVszQczXg?e=Iyys25"
+              data="https://m365x520260.sharepoint.com/:i:/s/ConnectEmployee/EVu-VaEHwHpIswSGJaMPRA4Bbwm2D3Rvq8UWFOHNCb3CPw?e=5P9AfR"
             ></object>
           </div>
           <div
             className="tab-pane fade"
             id="pills-profile"
             role="tabpanel"
-            aria-labelledby="pills-profile-tab"
+            aria-labelledby="interior"
           >
             {/* srini enable */}
             {/* <object
@@ -73,11 +75,16 @@ export default class Cafemenus extends React.Component<ICafemenusProps, {}> {
             <object
               width="100%"
               height="600"
-              data="https://m365x520260.sharepoint.com/:b:/s/ConnectEmployee/EVMILP6rtv1EiA6NcAVFSSUBGk_23lSyzJJKStmfPNypKQ?e=ez4Jip"
+              data="https://m365x520260.sharepoint.com/:i:/s/ConnectEmployee/ETxXCGisUj5NnfRLMTuHaUsBgqTGtGfdX1lVlhG5h-mpVg?e=euRBQk"
             ></object>
           </div>
         </div>
       </div>
     );
+  }
+
+  public _changeActive(currentitem: string){
+    $('.nav-link').removeClass(styles.active);
+    $("#"+currentitem).addClass(styles.active);
   }
 }

@@ -19,6 +19,13 @@
     background-repeat: no-repeat;
     width: 20%;
   }
+  .active{
+    color: #fff !important;
+    background-color: #a6093d !important;
+  }
+  a{
+    color: #a6093d !important;
+  }
   @media screen and (max-width: 425px) {
     .logo {
       width: 50% !important;

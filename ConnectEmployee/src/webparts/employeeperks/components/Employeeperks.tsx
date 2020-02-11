@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./Employeeperks.module.scss";
 import { IEmployeeperksProps } from "./IEmployeeperksProps";
 import cx from "classnames";
-import "jquery";
+import * as $ from "jquery";
 require("bootstrap");
 
 export default class Employeeperks extends React.Component<
@@ -17,9 +17,10 @@ export default class Employeeperks extends React.Component<
           className={styles.logo}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)}  onClick={() =>this._changeActive( "pills-home-tab")}
+              >
             <a
-              className={cx("nav-link", "active", styles.brrad)}
+              className={cx("nav-link active", styles.brrad,styles.active)}
               id="pills-home-tab"
               data-toggle="pill"
               href="#Employee-Discounts"
@@ -30,7 +31,7 @@ export default class Employeeperks extends React.Component<
               Employee Discounts
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "Community-perks")}>
             <a
               className={cx("nav-link", styles.brrad)}
               id="Community-perks"
@@ -43,7 +44,7 @@ export default class Employeeperks extends React.Component<
               Community Perks
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "Travel-discounts")}>
             <a
               className={cx("nav-link", styles.brrad)}
               id="Travel-discounts"
@@ -56,7 +57,7 @@ export default class Employeeperks extends React.Component<
               Travel Discounts
             </a>
           </li>
-          <li className={cx("nav-item", styles.navwd)}>
+          <li className={cx("nav-item", styles.navwd)} onClick={() =>this._changeActive( "child-benefits-tab")}>
             <a
               className={cx("nav-link", styles.brrad)}
               id="child-benefits-tab"
@@ -80,7 +81,7 @@ export default class Employeeperks extends React.Component<
             <h1>Employee Discounts</h1>
             <p>
               The terms perks and benefits are sometimes used interchangeably,
-              but for our purposes, benefits are generally a form of noncash
+              but for our purposes, benefits are generally a form of non cash
               compensation that cover basic needs. If not offered by the
               employer, employees would likely have to fund them on their own.
             </p>
@@ -292,4 +293,9 @@ export default class Employeeperks extends React.Component<
       </div>
     );
   }
+
+   public _changeActive(currentitem: string){
+     $('.nav-link').removeClass(styles.active);
+     $("#"+currentitem).addClass(styles.active);
+   }
 }
