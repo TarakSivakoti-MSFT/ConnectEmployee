@@ -15,8 +15,12 @@ export default class Employeeperks extends React.Component<
         <img
           // enable for admin
           // src="https://m365x520260.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/sys_pos_clr_rgb.png"
-          src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/Intelligent%20Health%202.png"
-          className={styles.logo}
+          // src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/Intelligent%20Health%202.png"
+          // className={styles.logo}
+
+          // covid-19 logo
+          src="https://contosohealthsystem.sharepoint.com/sites/ConnectEmployee/Shared%20Documents/covid-19-1330px.jpg"
+          className={styles.logo2}
         />
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li
