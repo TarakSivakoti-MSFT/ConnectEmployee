@@ -12,13 +12,13 @@
     @include ms-Grid-col;
   }
 
-
-  .active{
+  .active {
     color: #fff !important;
     background-color: #a6093d !important;
   }
-  a{
-    color: #a6093d !important;
+  a {
+    // color: #a6093d !important; //add for admin
+    color: black;
   }
   .navwd {
     width: 50% !important;
@@ -30,6 +30,11 @@
   .logo {
     background-repeat: no-repeat;
     width: 20%;
+  }
+  .logo2 {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 220px;
   }
 
   @media screen and (max-width: 425px) {
